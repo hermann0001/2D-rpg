@@ -5,8 +5,13 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public float moveSpeed = 1f;
+    public float collisionOffset = 0.05f;
+
     Vector2 movementInput;
     Rigidbody2D rb; 
+    public ContactFilter2D movementFilter;
+    List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +28,15 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate(){
         //if movement input is != 0 try to move
         if(movementInput != Vector2.zero){
-            rb.Cast()
-
+            int count = rb.Cast(
+                movementInput,
+                movementFilter, 
+                castCollisions, 
+                moveSpeed * Time.fixedDeltaTime + collisionOffset);
+            
+            if (count == 0){
+                rb.MovePosition(rb.position + movementInput * moveSpeed * Time.fixedDeltaTime);
+            }
         }
     }
 
