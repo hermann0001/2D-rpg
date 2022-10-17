@@ -124,8 +124,8 @@ TextureImporter:
         y: 320
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.37, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -145,8 +145,8 @@ TextureImporter:
         y: 320
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3488972, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -229,8 +229,8 @@ TextureImporter:
         y: 320
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 1.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -330,7 +330,7 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_10
       rect:
         serializedVersion: 2
-        x: 320
+        x: 319
         y: 320
         width: 32
         height: 32
@@ -351,12 +351,12 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_11
       rect:
         serializedVersion: 2
-        x: 352
+        x: 351
         y: 320
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: -0.04851532}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -372,12 +372,12 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_12
       rect:
         serializedVersion: 2
-        x: 416
+        x: 415
         y: 320
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -393,12 +393,12 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_13
       rect:
         serializedVersion: 2
-        x: 448
+        x: 447
         y: 320
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -481,8 +481,8 @@ TextureImporter:
         y: 320
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -502,8 +502,8 @@ TextureImporter:
         y: 320
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -523,8 +523,8 @@ TextureImporter:
         y: 320
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -544,8 +544,8 @@ TextureImporter:
         y: 288
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.37, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -565,8 +565,8 @@ TextureImporter:
         y: 288
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3488972, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -649,8 +649,8 @@ TextureImporter:
         y: 288
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 1.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -691,8 +691,8 @@ TextureImporter:
         y: 288
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.87935734, y: 0.22686195}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -712,8 +712,8 @@ TextureImporter:
         y: 288
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.7932644, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -750,12 +750,12 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_30
       rect:
         serializedVersion: 2
-        x: 352
+        x: 351
         y: 288
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.9353552, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -771,7 +771,7 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_31
       rect:
         serializedVersion: 2
-        x: 416
+        x: 418
         y: 288
         width: 32
         height: 32
@@ -792,7 +792,7 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_32
       rect:
         serializedVersion: 2
-        x: 448
+        x: 450
         y: 288
         width: 32
         height: 32
@@ -1069,8 +1069,8 @@ TextureImporter:
         y: 256
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1090,8 +1090,8 @@ TextureImporter:
         y: 256
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1108,11 +1108,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 320
-        y: 256
+        y: 257
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.003962517, y: 0.7304821}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1128,12 +1128,12 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_48
       rect:
         serializedVersion: 2
-        x: 352
-        y: 256
+        x: 351
+        y: 257
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.0015850067, y: 0.741148}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1149,12 +1149,12 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_49
       rect:
         serializedVersion: 2
-        x: 384
-        y: 256
+        x: 123
+        y: 218
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1170,12 +1170,12 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_50
       rect:
         serializedVersion: 2
-        x: 416
+        x: 415
         y: 256
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1191,12 +1191,12 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_51
       rect:
         serializedVersion: 2
-        x: 448
+        x: 447
         y: 256
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1510,8 +1510,8 @@ TextureImporter:
         y: 224
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.2, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1531,8 +1531,8 @@ TextureImporter:
         y: 224
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.2, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1548,12 +1548,12 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_68
       rect:
         serializedVersion: 2
-        x: 384
-        y: 224
+        x: 383
+        y: 256
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1569,7 +1569,7 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_69
       rect:
         serializedVersion: 2
-        x: 416
+        x: 415
         y: 224
         width: 32
         height: 32
@@ -1590,7 +1590,7 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_70
       rect:
         serializedVersion: 2
-        x: 448
+        x: 447
         y: 224
         width: 32
         height: 32
@@ -1611,7 +1611,7 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_71
       rect:
         serializedVersion: 2
-        x: 512
+        x: 511
         y: 224
         width: 32
         height: 32
@@ -1632,7 +1632,7 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_72
       rect:
         serializedVersion: 2
-        x: 544
+        x: 543
         y: 224
         width: 32
         height: 32
@@ -1653,12 +1653,12 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_73
       rect:
         serializedVersion: 2
-        x: 608
+        x: 607
         y: 224
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.17396164, y: 0.7689848}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1675,7 +1675,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 191
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1717,7 +1717,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 191
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1741,8 +1741,8 @@ TextureImporter:
         y: 192
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.7, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1762,8 +1762,8 @@ TextureImporter:
         y: 192
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.7, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1779,7 +1779,7 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_79
       rect:
         serializedVersion: 2
-        x: 416
+        x: 415
         y: 192
         width: 32
         height: 32
@@ -1800,7 +1800,7 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_80
       rect:
         serializedVersion: 2
-        x: 448
+        x: 447
         y: 192
         width: 32
         height: 32
@@ -1821,7 +1821,7 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_81
       rect:
         serializedVersion: 2
-        x: 512
+        x: 511
         y: 192
         width: 32
         height: 32
@@ -1842,7 +1842,7 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_82
       rect:
         serializedVersion: 2
-        x: 544
+        x: 543
         y: 192
         width: 32
         height: 32
@@ -1951,8 +1951,8 @@ TextureImporter:
         y: 160
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2056,8 +2056,8 @@ TextureImporter:
         y: 160
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2077,8 +2077,8 @@ TextureImporter:
         y: 160
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2094,7 +2094,7 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_94
       rect:
         serializedVersion: 2
-        x: 512
+        x: 511
         y: 160
         width: 32
         height: 32
@@ -2115,7 +2115,7 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_95
       rect:
         serializedVersion: 2
-        x: 544
+        x: 543
         y: 160
         width: 32
         height: 32
@@ -2136,7 +2136,7 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_96
       rect:
         serializedVersion: 2
-        x: 576
+        x: 575
         y: 160
         width: 32
         height: 32
@@ -2157,12 +2157,12 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_97
       rect:
         serializedVersion: 2
-        x: 608
+        x: 607
         y: 160
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.42188263, y: 0.5781145}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2196,48 +2196,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixel-cyberpunk-interior-1.0.0_99
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6375c4e8f9c335349a051f436e4d8a55
-      internalID: 460263762
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pixel-cyberpunk-interior-1.0.0_100
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a2519210d76b80439b26ddbc8ef45c5
-      internalID: 2083142731
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: pixel-cyberpunk-interior-1.0.0_101
       rect:
         serializedVersion: 2
@@ -2266,8 +2224,8 @@ TextureImporter:
         y: 128
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2367,7 +2325,7 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_107
       rect:
         serializedVersion: 2
-        x: 512
+        x: 511
         y: 128
         width: 32
         height: 32
@@ -2388,7 +2346,7 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_108
       rect:
         serializedVersion: 2
-        x: 544
+        x: 543
         y: 128
         width: 32
         height: 32
@@ -2409,12 +2367,12 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_109
       rect:
         serializedVersion: 2
-        x: 576
+        x: 574
         y: 128
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 1.0404301, y: 0.9710655}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2515,7 +2473,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 96
+        y: 94
         width: 32
         height: 32
       alignment: 0
@@ -2536,7 +2494,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 224
-        y: 96
+        y: 94
         width: 32
         height: 32
       alignment: 0
@@ -2557,7 +2515,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 96
+        y: 94
         width: 32
         height: 32
       alignment: 0
@@ -2578,7 +2536,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 288
-        y: 96
+        y: 94
         width: 32
         height: 32
       alignment: 0
@@ -2598,12 +2556,12 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_118
       rect:
         serializedVersion: 2
-        x: 320
+        x: 319
         y: 96
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3940773, y: -0.1353836}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2619,7 +2577,7 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_119
       rect:
         serializedVersion: 2
-        x: 352
+        x: 351
         y: 96
         width: 32
         height: 32
@@ -2724,12 +2682,12 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_124
       rect:
         serializedVersion: 2
-        x: 512
+        x: 511
         y: 96
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.75, y: 0.8}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2745,12 +2703,12 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_125
       rect:
         serializedVersion: 2
-        x: 544
+        x: 543
         y: 96
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.35, y: 0.8}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2766,7 +2724,7 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_126
       rect:
         serializedVersion: 2
-        x: 576
+        x: 575
         y: 96
         width: 32
         height: 32
@@ -2787,7 +2745,7 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_127
       rect:
         serializedVersion: 2
-        x: 608
+        x: 607
         y: 96
         width: 32
         height: 32
@@ -2872,7 +2830,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 64
+        y: 62
         width: 32
         height: 32
       alignment: 0
@@ -2893,7 +2851,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 224
-        y: 64
+        y: 62
         width: 32
         height: 32
       alignment: 0
@@ -2914,7 +2872,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 64
+        y: 62
         width: 32
         height: 32
       alignment: 0
@@ -2935,7 +2893,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 288
-        y: 64
+        y: 62
         width: 32
         height: 32
       alignment: 0
@@ -3040,11 +2998,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 608
-        y: 64
+        y: 65
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: -0.004386902, y: 1.6132741}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3061,11 +3019,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 32
+        y: 30
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3082,11 +3040,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 224
-        y: 32
+        y: 30
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3103,11 +3061,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 32
+        y: 30
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3124,11 +3082,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 288
-        y: 32
+        y: 30
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3144,8 +3102,8 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_144
       rect:
         serializedVersion: 2
-        x: 320
-        y: 32
+        x: 315
+        y: 36
         width: 32
         height: 32
       alignment: 0
@@ -3165,8 +3123,8 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_145
       rect:
         serializedVersion: 2
-        x: 352
-        y: 32
+        x: 347
+        y: 36
         width: 32
         height: 32
       alignment: 0
@@ -3187,7 +3145,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 384
-        y: 32
+        y: 37
         width: 32
         height: 32
       alignment: 0
@@ -3208,7 +3166,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 416
-        y: 32
+        y: 37
         width: 32
         height: 32
       alignment: 0
@@ -3232,8 +3190,8 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3253,8 +3211,8 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3274,8 +3232,8 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3295,8 +3253,8 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3312,8 +3270,8 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_152
       rect:
         serializedVersion: 2
-        x: 320
-        y: 0
+        x: 315
+        y: 4
         width: 32
         height: 32
       alignment: 0
@@ -3333,8 +3291,8 @@ TextureImporter:
       name: pixel-cyberpunk-interior-1.0.0_153
       rect:
         serializedVersion: 2
-        x: 352
-        y: 0
+        x: 347
+        y: 4
         width: 32
         height: 32
       alignment: 0
@@ -3355,7 +3313,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 384
-        y: 0
+        y: 7
         width: 32
         height: 32
       alignment: 0
@@ -3376,7 +3334,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 416
-        y: 0
+        y: 7
         width: 32
         height: 32
       alignment: 0
