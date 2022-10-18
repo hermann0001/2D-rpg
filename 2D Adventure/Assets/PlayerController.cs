@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,17 +12,13 @@ public class PlayerController : MonoBehaviour
     Vector2 movementInput;
     Rigidbody2D rb; 
     public ContactFilter2D movementFilter;
+    Animator animator;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        animator = GetComponent<Animator>();
         
     }
 
@@ -39,6 +36,12 @@ public class PlayerController : MonoBehaviour
                     success = TryMove(new Vector2(0, movementInput.y));
                 }
             }
+
+            animator.SetBool("isMoving", success);
+        }
+        else
+        {
+            animator.SetBool("isMoving", false);
         }
     }
 
@@ -63,7 +66,5 @@ public class PlayerController : MonoBehaviour
 
     void OnMove(InputValue movementValue){
         movementInput = movementValue.Get<Vector2>();
-
     }
-    
 }
