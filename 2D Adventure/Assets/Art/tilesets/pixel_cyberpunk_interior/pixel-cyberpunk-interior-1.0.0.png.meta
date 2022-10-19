@@ -334,8 +334,8 @@ TextureImporter:
         y: 320
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3350,6 +3350,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: pixel-cyberpunk-interior-1.0.0_99
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 290
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c7553ad25f27c408a4de74b86fc549
+      internalID: 460263762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -3370,7 +3391,7 @@ TextureImporter:
       pixel-cyberpunk-interior-1.0.0_16: 988249873
       pixel-cyberpunk-interior-1.0.0_71: -14989188
       pixel-cyberpunk-interior-1.0.0_29: 765909876
-      pixel-cyberpunk-interior-1.0.0_101: -849822696
+      pixel-cyberpunk-interior-1.0.0_28: -231126647
       pixel-cyberpunk-interior-1.0.0_110: -1345524232
       pixel-cyberpunk-interior-1.0.0_114: -2045121459
       pixel-cyberpunk-interior-1.0.0_7: 30139835
@@ -3383,7 +3404,7 @@ TextureImporter:
       pixel-cyberpunk-interior-1.0.0_42: 2025582456
       pixel-cyberpunk-interior-1.0.0_132: -1125460487
       pixel-cyberpunk-interior-1.0.0_36: -457099509
-      pixel-cyberpunk-interior-1.0.0_118: 828832062
+      pixel-cyberpunk-interior-1.0.0_49: -559967876
       pixel-cyberpunk-interior-1.0.0_72: -658767494
       pixel-cyberpunk-interior-1.0.0_104: 1210944604
       pixel-cyberpunk-interior-1.0.0_119: 350266746
@@ -3515,8 +3536,8 @@ TextureImporter:
       pixel-cyberpunk-interior-1.0.0_117: -1564458744
       pixel-cyberpunk-interior-1.0.0_65: -147050624
       pixel-cyberpunk-interior-1.0.0_14: 1104824544
-      pixel-cyberpunk-interior-1.0.0_28: -231126647
-      pixel-cyberpunk-interior-1.0.0_49: -559967876
+      pixel-cyberpunk-interior-1.0.0_101: -849822696
+      pixel-cyberpunk-interior-1.0.0_118: 828832062
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
