@@ -24,9 +24,17 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
         animator.SetFloat("Horizontal", movementInput.x);
         animator.SetFloat("Vertical", movementInput.y);
         animator.SetFloat("Speed", movementInput.sqrMagnitude);
+
+        if (horizontal != 0 || vertical != 0)
+        {
+            animator.SetFloat("lastMoveX", horizontal);
+            animator.SetFloat("lastMoveY", vertical);
+        }
     }
 
     void FixedUpdate()
