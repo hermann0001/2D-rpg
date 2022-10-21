@@ -12,7 +12,7 @@ public class NPC : MonoBehaviour
     private int index;
 
     public GameObject continueButton;
-    public float wordSpeed;
+    public float waitNextLetter;
     public bool playerIsClose;
 
     void Update()
@@ -45,7 +45,7 @@ public class NPC : MonoBehaviour
         foreach (char letter in dialogue[index].ToCharArray())
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(wordSpeed);
+            yield return new WaitForSeconds(waitNextLetter);
         }
     }
 
