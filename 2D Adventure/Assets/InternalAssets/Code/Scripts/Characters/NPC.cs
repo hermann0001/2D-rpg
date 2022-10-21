@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class NPC : MonoBehaviour
     public string[] dialogue;
     private int index;
 
+    public GameObject continueButton;
     public float wordSpeed;
     public bool playerIsClose;
 
@@ -17,18 +19,17 @@ public class NPC : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
         {
-
             if (dialoguePanel.activeInHierarchy)
-            {
                 zeroText();
-            }
             else
             {
                 dialoguePanel.SetActive(true);
                 StartCoroutine(Typing());
             }
-
-
+        }
+        if (dialogueText.text.Equals(dialogue[index]))
+        {
+            continueButton.SetActive(true);
         }
     }
 
@@ -50,6 +51,8 @@ public class NPC : MonoBehaviour
 
     public void NextLine()
     {
+        continueButton.SetActive(false);
+
         if (index < dialogue.Length - 1)
         {
             index++;
@@ -61,7 +64,6 @@ public class NPC : MonoBehaviour
             zeroText();
         }
     }
-
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -79,5 +81,4 @@ public class NPC : MonoBehaviour
             zeroText();
         }
     }
-
 }
