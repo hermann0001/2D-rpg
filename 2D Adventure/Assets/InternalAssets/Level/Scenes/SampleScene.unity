@@ -1213,8 +1213,8 @@ MonoBehaviour:
   m_RefResolutionX: 320
   m_RefResolutionY: 180
   m_UpscaleRT: 1
-  m_PixelSnapping: 0
-  m_CropFrameX: 0
+  m_PixelSnapping: 1
+  m_CropFrameX: 1
   m_CropFrameY: 0
   m_StretchFill: 0
 --- !u!114 &519420034
@@ -1468,10 +1468,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c2103d41c0f41a4d940ec814f722c8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 0}
+  dialoguePanel: {fileID: 1110128329}
   dialogueText: {fileID: 0}
   dialogue: []
-  wordSpeed: 0
+  wordSpeed: 0.1
   playerIsClose: 0
 --- !u!1 &960031615
 GameObject:
