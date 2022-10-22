@@ -12,6 +12,7 @@ namespace DialogueSystem
         public string[] lines;
 
         private int index;
+        public bool finished;
         [Header("Text Options")]
         [SerializeField] private Color textColor;
         [SerializeField] private Font textFont;
@@ -32,12 +33,7 @@ namespace DialogueSystem
 
             imageHolder.sprite = characterSprite;
             imageHolder.preserveAspect = true;
-        }
-
-        private void Start()
-        {
             textHolder.text = string.Empty;
-            startDialogue();
         }
 
         private void Update()
@@ -62,13 +58,13 @@ namespace DialogueSystem
             {
                 textHolder.text += c;
                 yield return new WaitForSeconds(delay);
-
             }
         }
 
         private void startDialogue()
         {
             index = 0;
+            finished = false;
             StartCoroutine(TypeLine());
         }
 
@@ -83,6 +79,7 @@ namespace DialogueSystem
             else
             {
                 //deactivates the first gameObject's parents (in this case the dialoguePanel is parent of dialogueText
+                finished = true;
                 gameObject.transform.parent.gameObject.SetActive(false);
             }
         }
