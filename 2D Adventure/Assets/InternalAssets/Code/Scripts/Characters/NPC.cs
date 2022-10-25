@@ -32,29 +32,25 @@ public class NPC : MonoBehaviour
 
     private void Update()
     {
-        while (playerIsClose)
+        if (checkForSkip())
         {
-            if (checkForSkip())
-            {
-                DialogueSystem.Instance.skipButton.onClick.Invoke();
-                Debug.Log("porcodio");
-            }
-            if (checkForTalk())
-            {
-                DialogueSystem.Instance.addNewDialogue(dialogue, npcName, characterSprite, textColor, textFont, sound);
-                startedTalking = true;
-            }
+            DialogueSystem.Instance.skipButton.onClick.Invoke();
+            Debug.Log("porcodio");
         }
-        startedTalking = false;
+        if (checkForTalk())
+        {
+            DialogueSystem.Instance.addNewDialogue(dialogue, npcName, characterSprite, textColor, textFont, sound);
+            startedTalking = true;
+        }
     }
 
     private bool checkForTalk()
     {
-        return Input.GetKeyDown(KeyCode.Return) && !startedTalking;
+        return playerIsClose && Input.GetKeyDown(KeyCode.Return) && !startedTalking;
     }
     private bool checkForSkip()
     {
-        return startedTalking && Input.GetKeyDown(KeyCode.Return);
+        return playerIsClose && startedTalking && Input.GetKeyDown(KeyCode.Return);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -67,7 +63,5 @@ public class NPC : MonoBehaviour
     {
         if (other.CompareTag("Player"))
             playerIsClose = false;
-            
-        
     }
 }
