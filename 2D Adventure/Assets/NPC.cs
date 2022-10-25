@@ -1,4 +1,4 @@
-using DialogueSystem;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.SceneManagement;
@@ -7,26 +7,54 @@ using UnityEngine.UI;
 
 public class NPC : MonoBehaviour
 {
-    public GameObject DialogueSystem;
-    public DialogueLine dialogue;
     private bool playerIsClose;
+    private bool startedTalking;
 
+    [Header("Dialogue")]
+    [SerializeField]
+    private string[] dialogue;
+    [SerializeField]
+    private Color textColor;
+    [SerializeField]
+    private Font textFont;
+
+    [Header("Name")]
+    [SerializeField]
+    private string npcName;
+
+    [Header("Sound")]
+    [SerializeField]
+    private AudioClip sound;
+
+    [Header("Image")]
+    [SerializeField]
+    private Sprite characterSprite;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
+        while (playerIsClose)
         {
-            Instantiate(DialogueSystem);
-            dialogue = DialogueSystem.GetComponentInChildren<DialogueLine>();
-            if (!DialogueSystem.activeInHierarchy)
+            if (checkForSkip())
             {
-                DialogueSystem.SetActive(true);
-                dialogue.Invoke("startDialogue", 0.1f);
-                Debug.Log(dialogue.GetComponentInChildren<Text>().tag);
+                DialogueSystem.Instance.skipButton.onClick.Invoke();
+                Debug.Log("porcodio");
             }
-            Debug.Log(dialogue.finished);
-            //TODO: SE IL DIALOGO FINISCE DESTROY(DIALOGUESYSTEM)
+            if (checkForTalk())
+            {
+                DialogueSystem.Instance.addNewDialogue(dialogue, npcName, characterSprite, textColor, textFont, sound);
+                startedTalking = true;
+            }
         }
+        startedTalking = false;
+    }
+
+    private bool checkForTalk()
+    {
+        return Input.GetKeyDown(KeyCode.Return) && !startedTalking;
+    }
+    private bool checkForSkip()
+    {
+        return startedTalking && Input.GetKeyDown(KeyCode.Return);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -39,5 +67,7 @@ public class NPC : MonoBehaviour
     {
         if (other.CompareTag("Player"))
             playerIsClose = false;
+            
+        
     }
 }
