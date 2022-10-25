@@ -35,7 +35,6 @@ public class NPC : MonoBehaviour
         if (checkForSkip())
         {
             DialogueSystem.Instance.skipButton.onClick.Invoke();
-            Debug.Log("porcodio");
         }
         if (checkForTalk())
         {
@@ -62,6 +61,11 @@ public class NPC : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
+        {
             playerIsClose = false;
+            DialogueSystem.Instance.dialoguePanel.SetActive(false);
+            startedTalking = false;
+
+        }
     }
 }
