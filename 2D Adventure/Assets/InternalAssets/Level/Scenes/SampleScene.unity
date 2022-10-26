@@ -837,7 +837,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -0.0825, y: -0.0882, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1326,7 +1326,7 @@ Transform:
   m_GameObject: {fileID: 934211577}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.787, y: 1.113, z: 0}
-  m_LocalScale: {x: 0.65, y: 0.65, z: 1}
+  m_LocalScale: {x: 0.64, y: 0.64, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3259,12 +3259,20 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3811750652423981165, guid: afc774c9d4aed6440a18fcf6dfcf40c2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3811750652423981165, guid: afc774c9d4aed6440a18fcf6dfcf40c2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3811750652423981165, guid: afc774c9d4aed6440a18fcf6dfcf40c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.0825
       objectReference: {fileID: 0}
     - target: {fileID: 3811750652423981165, guid: afc774c9d4aed6440a18fcf6dfcf40c2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.0882
       objectReference: {fileID: 0}
     - target: {fileID: 3811750652423981165, guid: afc774c9d4aed6440a18fcf6dfcf40c2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3318,6 +3326,10 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8599919765590197452, guid: afc774c9d4aed6440a18fcf6dfcf40c2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 525887263, guid: bd52f0b17b2c43744882e495c2fc86ee, type: 3}
     - target: {fileID: 8599919765590197452, guid: afc774c9d4aed6440a18fcf6dfcf40c2, type: 3}
       propertyPath: m_SortingOrder
       value: 1
