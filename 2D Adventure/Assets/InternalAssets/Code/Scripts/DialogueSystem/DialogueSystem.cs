@@ -76,7 +76,7 @@ public class DialogueSystem : MonoBehaviour
         foreach (char c in dialogueLines[index].ToCharArray())
         {
             textHolder.text += c;
-            //SoundManager.Instance.PlaySound(sound);
+            SoundManager.Instance.PlaySound(sound);
             yield return new WaitForSeconds(delay);
         }
     }

@@ -2587,7 +2587,7 @@ MonoBehaviour:
   skipButton: {fileID: 0}
   textHolder: {fileID: 0}
   textName: {fileID: 0}
-  delay: 0
+  delay: 0.1
   imageHolder: {fileID: 0}
 --- !u!1 &2013124681
 GameObject:
