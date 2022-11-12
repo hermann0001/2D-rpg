@@ -12,18 +12,20 @@ public class PlayerController : MonoBehaviour
     public ContactFilter2D movementFilter;
     Animator animator;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
+    Joystick joystick;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-
+        joystick = FindObjectOfType<Joystick>();
     }
 
     void Update()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        float horizontal = joystick.Horizontal;
+        float vertical = joystick.Vertical;
         animator.SetFloat("Horizontal", movementInput.x);
         animator.SetFloat("Vertical", movementInput.y);
         animator.SetFloat("Speed", movementInput.sqrMagnitude);
