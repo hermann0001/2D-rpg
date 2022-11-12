@@ -8,24 +8,15 @@ public class PlayerController : MonoBehaviour
     public float collisionOffset = 0.05f;
 
     Vector2 movementInput;
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
     public ContactFilter2D movementFilter;
-    Animator animator;
+    public Animator animator;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
-    Joystick joystick;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        joystick = FindObjectOfType<Joystick>();
-    }
-
+ 
     void Update()
     {
-        float horizontal = joystick.Horizontal;
-        float vertical = joystick.Vertical;
+        float horizontal = movementInput.x;
+        float vertical = movementInput.y;
         animator.SetFloat("Horizontal", movementInput.x);
         animator.SetFloat("Vertical", movementInput.y);
         animator.SetFloat("Speed", movementInput.sqrMagnitude);

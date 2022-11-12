@@ -61,8 +61,8 @@ public class NPC : MonoBehaviour
             playerIsClose = false;
             DialogueSystem.Instance.dialoguePanel.SetActive(false);
             //SoundManager.Instance.StopSound();
+            DialogueSystem.Instance.StopAllCoroutines();
             startedTalking = false;
-
         }
     }
 }
