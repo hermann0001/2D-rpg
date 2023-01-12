@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,9 +11,26 @@ public class PlayerController : MonoBehaviour
     public ContactFilter2D movementFilter;
     public Animator animator;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
- 
+
+
+    private bool moveLeft;
+    private bool moveRight;
+    private bool moveUp;
+    private bool moveDown;
+
+    private void Start()
+    {
+        moveLeft = false;
+        moveRight = false;
+        moveUp = false;
+        moveDown = false;
+    }
+
     void Update()
     {
+
+        MovementPlayer();
+
         float horizontal = movementInput.x;
         float vertical = movementInput.y;
         animator.SetFloat("Horizontal", movementInput.x);
@@ -30,6 +46,8 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+
+
         //if movement input is != 0 try to move
         if (movementInput != Vector2.zero)
         {
@@ -66,8 +84,72 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnMove(InputValue movementValue)
+    private void MovementPlayer()
     {
-        movementInput = movementValue.Get<Vector2>();
+        if (moveLeft)
+        {
+            movementInput = new Vector2(-1, 0);
+        }
+        else if (moveRight)
+        {
+            movementInput = new Vector2(1, 0);
+        }
+        else if (moveUp)
+        {
+            movementInput = new Vector2(0, 1);
+        }
+        else if (moveDown)
+        {
+            movementInput = new Vector2(0, -1);
+        }
+        else
+        {
+            movementInput = Vector2.zero;
+        }
+    }
+
+    //void OnMove(InputValue movementValue)
+    //{
+    //    movementInput = movementValue.Get<Vector2>();
+    //}
+
+
+    //OnPointer<Down:Press; Up:Release><Direction>
+    public void OnPointerDownLeft()
+    {
+        moveLeft = true;
+    }
+
+    public void OnPointerUpLeft()
+    {
+        moveLeft = false;
+    }
+
+    public void OnPointerDownRight()
+    {
+        moveRight = true;
+    }
+
+    public void OnPointerUpRight()
+    {
+        moveRight = false;
+    }
+    public void OnPointerUpDown()
+    {
+        moveDown = false;
+    }
+    public void OnPointerDownDown()
+    {
+        moveDown = true;
+    }
+
+    public void OnPointerDownUp()
+    {
+        moveUp = true;
+    }
+
+    public void OnPointerUpUp()
+    {
+        moveUp = false;
     }
 }
