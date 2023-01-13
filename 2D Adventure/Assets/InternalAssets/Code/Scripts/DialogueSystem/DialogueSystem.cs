@@ -29,7 +29,6 @@ public class DialogueSystem : MonoBehaviour
         imageHolder = dialoguePanel.transform.Find("Image").GetComponent<Image>(); //dialoguePanel.transform.FindChild("Image").GetComponent<Text>();
         dialoguePanel.SetActive(false);
         skipButton = dialoguePanel.transform.Find("Skip").GetComponent<Button>();
-
         skipButton.onClick.AddListener(delegate { CompleteOrSkip(); });
 
         if (Instance != null && Instance != this)

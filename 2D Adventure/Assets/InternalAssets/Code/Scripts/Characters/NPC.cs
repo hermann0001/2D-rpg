@@ -1,10 +1,11 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class NPC : MonoBehaviour
 {
     private bool playerIsClose;
     private bool startedTalking;
+    private bool press = false;
 
     [Header("Dialogue")]
     [SerializeField]
@@ -30,22 +31,22 @@ public class NPC : MonoBehaviour
     {
         if (checkForSkip())
         {
-            DialogueSystem.Instance.skipButton.onClick.Invoke();
+            Invoke("callToSkip", 0.6f);
         }
         if (checkForTalk())
         {
-            DialogueSystem.Instance.addNewDialogue(dialogue, npcName, characterSprite, textColor, textFont, sound);
             startedTalking = true;
+            DialogueSystem.Instance.addNewDialogue(dialogue, npcName, characterSprite, textColor, textFont, sound);
         }
     }
 
     private bool checkForTalk()
     {
-        return playerIsClose && Input.GetKeyDown(KeyCode.Return) && !startedTalking;
+        return playerIsClose && press && !startedTalking;
     }
     private bool checkForSkip()
     {
-        return playerIsClose && startedTalking && Input.GetKeyDown(KeyCode.Return);
+        return playerIsClose && startedTalking && press;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -65,4 +66,10 @@ public class NPC : MonoBehaviour
             startedTalking = false;
         }
     }
+
+    public void interactableButtonPressed() {press = true;}
+
+    public void interactableButtonRelease() {press = false;}
+
+    void callToSkip() { DialogueSystem.Instance.skipButton.onClick.Invoke(); }
 }
