@@ -32,13 +32,9 @@ public class DialogueSystem : MonoBehaviour
         skipButton.onClick.AddListener(delegate { CompleteOrSkip(); });
 
         if (Instance != null && Instance != this)
-        {
             Destroy(gameObject);
-        }
         else
-        {
             Instance = this;
-        }
     }
 
     public void addNewDialogue(string[] lines, string name, Sprite characterSprite, Color textColor, Font textFont, AudioClip sound)
@@ -65,8 +61,6 @@ public class DialogueSystem : MonoBehaviour
         textName.text = npcName;
         dialoguePanel.SetActive(true);
         StartCoroutine(TypeLine());
-
-
     }
 
     private IEnumerator TypeLine()

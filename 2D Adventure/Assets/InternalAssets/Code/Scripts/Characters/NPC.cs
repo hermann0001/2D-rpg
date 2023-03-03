@@ -5,7 +5,6 @@ public class NPC : MonoBehaviour
 {
     private bool playerIsClose;
     private bool startedTalking;
-    private bool press = false;
 
     [Header("Dialogue")]
     [SerializeField]
@@ -27,26 +26,16 @@ public class NPC : MonoBehaviour
     [SerializeField]
     private Sprite characterSprite;
 
-    private void Update()
+    public void Talk()
     {
-        if (checkForSkip())
-        {
-            Invoke("callToSkip", 0.6f);
-        }
-        if (checkForTalk())
+        if (!startedTalking)
         {
             startedTalking = true;
             DialogueSystem.Instance.addNewDialogue(dialogue, npcName, characterSprite, textColor, textFont, sound);
         }
-    }
-
-    private bool checkForTalk()
-    {
-        return playerIsClose && press && !startedTalking;
-    }
-    private bool checkForSkip()
-    {
-        return playerIsClose && startedTalking && press;
+        else
+            Skip();
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -67,9 +56,5 @@ public class NPC : MonoBehaviour
         }
     }
 
-    public void interactableButtonPressed() {press = true;}
-
-    public void interactableButtonRelease() {press = false;}
-
-    void callToSkip() { DialogueSystem.Instance.skipButton.onClick.Invoke(); }
+    private void Skip() { DialogueSystem.Instance.skipButton.onClick.Invoke(); }
 }
