@@ -10,6 +10,10 @@ public class CameraFollow : MonoBehaviour
     public Vector2 maxPos;
     public Vector2 minPos;
 
+    private void Start()
+    {
+        transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
+    }
 
     private void FixedUpdate()
     {

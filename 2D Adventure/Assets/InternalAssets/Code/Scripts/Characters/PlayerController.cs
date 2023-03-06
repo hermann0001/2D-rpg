@@ -4,14 +4,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 1f;
-    public float collisionOffset = 0.05f;
+    public float collisionOffset = 0.01f;
 
     Vector2 movementInput;
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
     public ContactFilter2D movementFilter;
-    public Animator animator;
+    private Animator animator;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
-    public VectorValue startingPosition;
+    public SceneTransition startingPosition;
 
 
     private bool moveLeft;
@@ -21,16 +21,17 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
         moveLeft = false;
         moveRight = false;
         moveUp = false;
         moveDown = false;
-        transform.position = startingPosition.initialValue;
+        transform.position = startingPosition.playerInitialValue;
     }
 
     void Update()
     {
-
         MovementPlayer();
 
         float horizontal = movementInput.x;
@@ -48,8 +49,6 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-
-
         //if movement input is != 0 try to move
         if (movementInput != Vector2.zero)
         {
@@ -109,12 +108,6 @@ public class PlayerController : MonoBehaviour
             movementInput = Vector2.zero;
         }
     }
-
-    //void OnMove(InputValue movementValue)
-    //{
-    //    movementInput = movementValue.Get<Vector2>();
-    //}
-
 
     //OnPointer<Down:Press; Up:Release><Direction>
     public void OnPointerDownLeft()
