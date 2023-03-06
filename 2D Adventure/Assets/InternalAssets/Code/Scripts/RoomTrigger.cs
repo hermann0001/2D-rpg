@@ -26,6 +26,7 @@ public class RoomTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             storage.playerInitialValue = playerPosition;
+            //storage.lastMove = 
             //storage.needText = needText;
             //storage.placeName = placeName;
             SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
