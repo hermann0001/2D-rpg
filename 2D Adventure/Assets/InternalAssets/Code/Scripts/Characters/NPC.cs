@@ -28,14 +28,16 @@ public class NPC : MonoBehaviour
 
     public void Talk()
     {
-        if (!startedTalking)
+        if (playerIsClose)
         {
-            startedTalking = true;
-            DialogueSystem.Instance.addNewDialogue(dialogue, npcName, characterSprite, textColor, textFont, sound);
+            if (!startedTalking)
+            {
+                startedTalking = true;
+                DialogueSystem.Instance.addNewDialogue(dialogue, npcName, characterSprite, textColor, textFont, sound);
+            }
+            else
+                Skip();
         }
-        else
-            Skip();
-        
     }
 
     private void OnTriggerEnter2D(Collider2D other)

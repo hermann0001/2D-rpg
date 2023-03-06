@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public ContactFilter2D movementFilter;
     public Animator animator;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
+    public VectorValue startingPosition;
 
 
     private bool moveLeft;
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
         moveRight = false;
         moveUp = false;
         moveDown = false;
+        transform.position = startingPosition.initialValue;
     }
 
     void Update()
