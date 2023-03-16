@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.9" tiledversion="1.9.2" name="laboratory_stuff_tiles" tilewidth="16" tileheight="16" tilecount="592" columns="37">
- <image source="../../../../gameAssets/TILEPACKS/tiles_laboratory_LandOfPixels/16px/tilesStuff.png" width="592" height="256"/>
+<tileset version="1.10" tiledversion="1.10.0" name="laboratory_stuff_tiles" tilewidth="16" tileheight="16" tilecount="592" columns="37">
+ <image source="tilesStuff.png" width="592" height="256"/>
 </tileset>

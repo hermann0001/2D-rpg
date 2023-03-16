@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="156" height="163" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="231">
- <tileset firstgid="1" source="../Examples/Overhead/Import/laboratory_floor_tiles.tsx"/>
- <tileset firstgid="199" source="../Examples/Overhead/Import/laboratory_walls_tiles.tsx"/>
- <tileset firstgid="391" source="../Examples/Overhead/Import/laboratory_stuff_tiles.tsx"/>
- <tileset firstgid="983" source="../Examples/Overhead/Import/bedroom16x16.tsx"/>
- <tileset firstgid="2695" source="../Examples/Overhead/Import/bathroom.tsx"/>
- <tileset firstgid="3591" source="../Examples/Overhead/Import/kitchen.tsx"/>
- <tileset firstgid="4375" source="../Examples/Overhead/Import/kitchen shadowless.tsx"/>
- <tileset firstgid="5159" source="../Examples/Overhead/Import/shadows.tsx"/>
- <tileset firstgid="5239" source="../Examples/Overhead/Import/living_room_shadowless.tsx"/>
- <tileset firstgid="5959" source="../Examples/Overhead/Import/basement_shadowless.tsx"/>
- <tileset firstgid="6759" source="../Examples/Overhead/Import/generic_16x16_shadowless.tsx"/>
- <tileset firstgid="8007" source="../Examples/Overhead/Import/jail_16x16_shadowless.tsx"/>
+<map version="1.10" tiledversion="1.10.0" orientation="orthogonal" renderorder="right-down" width="156" height="163" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="231">
+ <tileset firstgid="1" source="laboratory_floor_tiles.tsx"/>
+ <tileset firstgid="199" source="laboratory_walls_tiles.tsx"/>
+ <tileset firstgid="391" source="laboratory_stuff_tiles.tsx"/>
+ <tileset firstgid="983" source="bedroom16x16.tsx"/>
+ <tileset firstgid="2695" source="bathroom.tsx"/>
+ <tileset firstgid="3591" source="kitchen.tsx"/>
+ <tileset firstgid="4375" source="kitchen shadowless.tsx"/>
+ <tileset firstgid="5159" source="shadows.tsx"/>
+ <tileset firstgid="5239" source="living_room_shadowless.tsx"/>
+ <tileset firstgid="5959" source="basement_shadowless.tsx"/>
+ <tileset firstgid="6759" source="generic_16x16_shadowless.tsx"/>
+ <tileset firstgid="8007" source="jail_16x16_shadowless.tsx"/>
  <layer id="1" name="Ground" width="156" height="163">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
