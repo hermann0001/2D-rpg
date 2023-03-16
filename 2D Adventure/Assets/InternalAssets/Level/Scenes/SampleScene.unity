@@ -658,6 +658,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5852511896020163353, guid: 884da3a350d91514db515ae377a751cc, type: 3}
+      propertyPath: m_SortOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1443242957066820480, guid: 884da3a350d91514db515ae377a751cc, type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -1220836901708419454, guid: 884da3a350d91514db515ae377a751cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911044906847371720, guid: 884da3a350d91514db515ae377a751cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3520107858910318866, guid: 884da3a350d91514db515ae377a751cc, type: 3}
       propertyPath: m_Name
       value: map
@@ -2719,7 +2735,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156132670636222585}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.921, y: -3.039, z: 0}
+  m_LocalPosition: {x: 7.618, y: -3.998, z: 0}
   m_LocalScale: {x: 0.64, y: 0.64, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
