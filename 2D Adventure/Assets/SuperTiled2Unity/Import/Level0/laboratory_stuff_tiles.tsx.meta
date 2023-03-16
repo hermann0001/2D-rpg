@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: da2f851c24ac66240b3e973a07bbe269
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: cc34d0f3dc257a442819830b408c5322, type: 3}
+  missingFiles: []
+  errors:
+  - Could not generate asset path for '../../../../gameAssets/TILEPACKS/tiles_laboratory_LandOfPixels/16px/tilesStuff.png'
+  - 'Missing texture asset: ../../../../gameAssets/TILEPACKS/tiles_laboratory_LandOfPixels/16px/tilesStuff.png'
+  warnings: []
+  missingSortingLayers: []
+  missingLayers: []
+  missingTags: []
+  importerVersion: 13
+  pixelsPerUnit: 100
+  edgesPerEllipse: 32
+  numberOfObjectsImported: 2
+  useSpriteAtlas: 1
+  atlasWidth: 2048
+  atlasHeight: 2048

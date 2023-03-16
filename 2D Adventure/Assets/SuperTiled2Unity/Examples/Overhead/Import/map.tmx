@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="156" height="163" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="229">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="156" height="163" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="231">
  <tileset firstgid="1" source="laboratory_floor_tiles.tsx"/>
  <tileset firstgid="199" source="laboratory_walls_tiles.tsx"/>
  <tileset firstgid="391" source="laboratory_stuff_tiles.tsx"/>
@@ -1575,9 +1575,8 @@
   <object id="91" x="608.5" y="274.25" width="15.125" height="22.375"/>
   <object id="92" x="697.75" y="255.375" width="20.75" height="64"/>
   <object id="93" x="816.25" y="191" width="47.125" height="17"/>
-  <object id="94" x="915" y="206.375" width="10.375" height="12.375"/>
+  <object id="94" x="913" y="206.375" width="14.125" height="12.375"/>
   <object id="95" x="891.875" y="225.5" width="34.875" height="20.25"/>
-  <object id="96" x="1170.75" y="209.75" width="11.25" height="9"/>
   <object id="97" x="1170.25" y="225.5" width="35.25" height="20.75"/>
   <object id="98" x="1296.5" y="191.25" width="62.5" height="17.25"/>
   <object id="99" x="1490.18" y="206.909" width="11.9091" height="33.3636"/>
@@ -1586,12 +1585,10 @@
   <object id="102" x="1969.82" y="200.364" width="45.2727" height="6.90909"/>
   <object id="103" x="2032.36" y="192.727" width="30.9091" height="15.4545"/>
   <object id="104" x="2043.09" y="257.455" width="36.7273" height="19.8182"/>
-  <object id="105" x="2065.18" y="276.545" width="13.5455" height="10.3636"/>
   <object id="106" x="2099" y="433.25" width="10.25" height="5.875"/>
   <object id="107" x="2145.13" y="432.375" width="62.75" height="9"/>
   <object id="108" x="2223.88" y="432.5" width="31" height="11"/>
   <object id="109" x="2301.25" y="433.25" width="165.75" height="14"/>
-  <object id="110" x="2466.25" y="435.875" width="13.625" height="2.25"/>
   <object id="111" x="2306.13" y="447.261">
    <polygon points="0,0 0.73913,2.65217 8.04348,2.65217 13.8261,0.73913 13.8261,0"/>
   </object>
@@ -1677,8 +1674,6 @@
   <object id="206" x="603.477" y="1314.3" width="7.09091" height="13.4545"/>
   <object id="207" x="573.295" y="1314.73" width="7.09091" height="12.9091"/>
   <object id="208" x="573.864" y="1282.59" width="7.09091" height="12.5455"/>
-  <object id="209" x="37" y="447.5" width="8.125" height="6.125"/>
-  <object id="210" x="2053.38" y="449" width="7.75" height="4.875"/>
   <object id="211" x="1185.25" y="1119.75" width="12" height="11"/>
   <object id="212" x="1216" y="1118.75" width="160.5" height="12"/>
   <object id="213" x="1424.25" y="1119.25" width="79.75" height="12"/>
@@ -1696,5 +1691,7 @@
   <object id="226" x="1189" y="1185.25" width="21.25" height="52.5"/>
   <object id="227" x="1181.25" y="1185.25" width="8.25" height="13.5"/>
   <object id="228" x="1181.75" y="1218.25" width="7.25" height="13"/>
+  <object id="229" x="1168.75" y="191" width="14.5" height="7.5"/>
+  <object id="230" x="850.25" y="210.5" width="12" height="9.25"/>
  </objectgroup>
 </map>

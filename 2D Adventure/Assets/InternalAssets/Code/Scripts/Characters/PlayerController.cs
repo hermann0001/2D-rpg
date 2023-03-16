@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
         moveRight = false;
         moveUp = false;
         moveDown = false;
-        //transform.position = startingPosition.playerInitialValue;
+        transform.position = startingPosition.playerInitialValue;
     }
 
     void Update()
