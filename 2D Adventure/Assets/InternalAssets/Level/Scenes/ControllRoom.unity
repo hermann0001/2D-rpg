@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3708984, g: 0.37837017, b: 0.35722524, a: 1}
+  m_IndirectSpecularColor: {r: 0.3708985, g: 0.3783704, b: 0.35722548, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -767,7 +767,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 5
   m_Sprite: {fileID: 525887263, guid: bd52f0b17b2c43744882e495c2fc86ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1732,6 +1732,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: secondolivello
       objectReference: {fileID: 0}
+    - target: {fileID: -4543877728425510127, guid: e77ad2889af0f69409c05a4cda2892d7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -4222902993418927483, guid: e77ad2889af0f69409c05a4cda2892d7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 36824849022061442, guid: e77ad2889af0f69409c05a4cda2892d7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 40588028023009878, guid: e77ad2889af0f69409c05a4cda2892d7, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1774,6 +1786,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 40588028023009878, guid: e77ad2889af0f69409c05a4cda2892d7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393028810687635894, guid: e77ad2889af0f69409c05a4cda2892d7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635264431005761000, guid: e77ad2889af0f69409c05a4cda2892d7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632410133235557739, guid: e77ad2889af0f69409c05a4cda2892d7, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632410133235557739, guid: e77ad2889af0f69409c05a4cda2892d7, type: 3}
+      propertyPath: m_SortingLayerID
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
