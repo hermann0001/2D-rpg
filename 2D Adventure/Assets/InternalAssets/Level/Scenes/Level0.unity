@@ -139,6 +139,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 2208439fa0d1d6e47b0b0f80eced9208, type: 2}
     - target: {fileID: 550111661722279467, guid: a93d896243a1154459e0858d2eb95714, type: 3}
+      propertyPath: fadeWait
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 550111661722279467, guid: a93d896243a1154459e0858d2eb95714, type: 3}
       propertyPath: needText
       value: 1
       objectReference: {fileID: 0}
@@ -150,6 +154,14 @@ PrefabInstance:
       propertyPath: placeText
       value: 
       objectReference: {fileID: 488333425}
+    - target: {fileID: 550111661722279467, guid: a93d896243a1154459e0858d2eb95714, type: 3}
+      propertyPath: fadeInPanel
+      value: 
+      objectReference: {fileID: 1644339749109708450, guid: f6a006ce8ee0a8843a56c6342b37ea9b, type: 3}
+    - target: {fileID: 550111661722279467, guid: a93d896243a1154459e0858d2eb95714, type: 3}
+      propertyPath: fadeOutPanel
+      value: 
+      objectReference: {fileID: 582985912588461166, guid: 0c9850b91257d9748b82768496619cff, type: 3}
     - target: {fileID: 550111661722279467, guid: a93d896243a1154459e0858d2eb95714, type: 3}
       propertyPath: playerStorage
       value: 
@@ -180,11 +192,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3606239561792022069, guid: a93d896243a1154459e0858d2eb95714, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.816
+      value: 3.548
       objectReference: {fileID: 0}
     - target: {fileID: 3606239561792022069, guid: a93d896243a1154459e0858d2eb95714, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.276
+      value: -12.282
       objectReference: {fileID: 0}
     - target: {fileID: 3606239561792022069, guid: a93d896243a1154459e0858d2eb95714, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2057,7 +2069,7 @@ Canvas:
   m_GameObject: {fileID: 1724888368}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 2114895374}
   m_PlaneDistance: 100
   m_PixelPerfect: 1
@@ -2759,6 +2771,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 2208439fa0d1d6e47b0b0f80eced9208, type: 2}
     - target: {fileID: 550111661722279467, guid: a93d896243a1154459e0858d2eb95714, type: 3}
+      propertyPath: fadeWait
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 550111661722279467, guid: a93d896243a1154459e0858d2eb95714, type: 3}
       propertyPath: needText
       value: 1
       objectReference: {fileID: 0}
@@ -2770,6 +2786,14 @@ PrefabInstance:
       propertyPath: placeText
       value: 
       objectReference: {fileID: 488333425}
+    - target: {fileID: 550111661722279467, guid: a93d896243a1154459e0858d2eb95714, type: 3}
+      propertyPath: fadeInPanel
+      value: 
+      objectReference: {fileID: 1644339749109708450, guid: f6a006ce8ee0a8843a56c6342b37ea9b, type: 3}
+    - target: {fileID: 550111661722279467, guid: a93d896243a1154459e0858d2eb95714, type: 3}
+      propertyPath: fadeOutPanel
+      value: 
+      objectReference: {fileID: 582985912588461166, guid: 0c9850b91257d9748b82768496619cff, type: 3}
     - target: {fileID: 550111661722279467, guid: a93d896243a1154459e0858d2eb95714, type: 3}
       propertyPath: playerStorage
       value: 
@@ -2872,7 +2896,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156132670636222585}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.371, y: -12.715, z: 0}
+  m_LocalPosition: {x: 3.81, y: -12.693, z: 0}
   m_LocalScale: {x: 0.64, y: 0.64, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

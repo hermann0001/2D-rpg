@@ -8,8 +8,19 @@ public class RoomTrigger : MonoBehaviour
 {
     public int sceneBuildIndex;
     public Vector2 playerPosition;
-
     public SceneTransition storage;
+    public GameObject fadeInPanel;
+    public GameObject fadeOutPanel;
+    public float fadeWait;
+
+    private void Awake()
+    {
+        if(fadeInPanel != null)
+        {
+            GameObject panel = Instantiate(fadeInPanel, Vector3.zero, Quaternion.identity) as GameObject;
+            Destroy(panel, 1);
+        }
+    }
     //public bool needText;
     //public string placeName;
     //public GameObject text;
@@ -29,7 +40,22 @@ public class RoomTrigger : MonoBehaviour
             //storage.lastMove = 
             //storage.needText = needText;
             //storage.placeName = placeName;
-            SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
+            StartCoroutine(FadeCo());
+            //SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
+        }
+    }
+
+    public IEnumerator FadeCo()
+    {
+        if(fadeOutPanel != null)
+        {
+            Instantiate(fadeOutPanel, Vector3.zero, Quaternion.identity);
+        }
+        yield return new WaitForSeconds(fadeWait);
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneBuildIndex, LoadSceneMode.Single);
+        while (!asyncOperation.isDone)
+        {
+            yield return null;
         }
     }
 
