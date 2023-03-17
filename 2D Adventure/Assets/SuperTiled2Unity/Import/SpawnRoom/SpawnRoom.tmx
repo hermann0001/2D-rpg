@@ -191,12 +191,12 @@
   <object id="1" x="0.5" y="255.5" width="368" height="15"/>
   <object id="2" x="353.5" y="1" width="12.5" height="255.5"/>
   <object id="3" x="1" y="1.5" width="14.5" height="255.5"/>
-  <object id="4" x="332" y="129.667" width="19" height="45.6667"/>
-  <object id="5" x="323.333" y="136" width="8" height="12.6667"/>
-  <object id="6" x="321.333" y="47.6667" width="28.6667" height="15.3333"/>
+  <object id="4" x="331.992" y="128.913" width="19.0078" height="46.4199"/>
+  <object id="5" x="321.788" y="128.909" width="10.4545" height="21.2121"/>
+  <object id="6" x="321.333" y="47.6667" width="33.6667" height="15.3333"/>
   <object id="7" x="16.6667" y="14" width="335.667" height="34"/>
   <object id="8" x="144.667" y="47" width="28.6667" height="14.3333"/>
   <object id="9" x="36.6667" y="47.3333" width="21.6667" height="36"/>
-  <object id="10" x="17.3333" y="46" width="14.6667" height="12.3333"/>
+  <object id="10" x="13.2424" y="46" width="25.2121" height="12.3333"/>
  </objectgroup>
 </map>

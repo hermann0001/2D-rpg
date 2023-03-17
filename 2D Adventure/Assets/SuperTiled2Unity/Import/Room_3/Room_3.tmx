@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="23" height="16" tilewidth="16" tileheight="16" infinite="0" nextlayerid="10" nextobjectid="9">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="23" height="16" tilewidth="16" tileheight="16" infinite="0" nextlayerid="10" nextobjectid="10">
  <tileset firstgid="1" source="../Level0/living_room_shadowless.tsx"/>
  <tileset firstgid="721" source="../Level0/laboratory_stuff_tiles.tsx"/>
  <tileset firstgid="1313" source="../Level0/basement_shadowless.tsx"/>
@@ -154,8 +154,9 @@
   <object id="3" x="352.326" y="46.558" width="15.6418" height="210.199"/>
   <object id="4" x="14.8512" y="48.3166" width="15.5949" height="8.0029"/>
   <object id="5" x="144.983" y="47.7704" width="30.704" height="16.1877"/>
-  <object id="6" x="240.885" y="55.5922" width="46.4766" height="8.6616"/>
+  <object id="6" x="240.885" y="47.4104" width="46.4766" height="16.8434"/>
   <object id="7" x="303.544" y="47.9525" width="32.6476" height="16.0965"/>
   <object id="8" x="315.369" y="112.704" width="37.4679" height="21.189"/>
+  <object id="9" x="1.5" y="255" width="366.5" height="13"/>
  </objectgroup>
 </map>
