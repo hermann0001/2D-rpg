@@ -1,28 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
-    public static bool isGameOver;
-
-    private void Awake()
+    public GameObject pauseMenuScreen;
+    public GameObject gameOverScreen;
+    public void ReturnTitle()
     {
-        isGameOver = false;
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+        SceneManager.LoadScene("Menu");
+        gameOverScreen.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Pause()
     {
-        if (isGameOver)
-        {
-            //gameOverScreen.active;
-        }
-        
+        Time.timeScale = 0;
+        pauseMenuScreen.SetActive(true);
     }
+
+    public void Resume()
+    {
+        Time.timeScale = 1f;
+        pauseMenuScreen.SetActive(false);
+    }
+
+    public void GameOver()
+    {
+        gameOverScreen.SetActive(true);
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        gameOverScreen.SetActive(false);
+    }
+
 }

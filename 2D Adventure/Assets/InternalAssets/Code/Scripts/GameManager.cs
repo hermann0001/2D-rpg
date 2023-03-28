@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public int startingSceneIndex = 1;
     private bool _isGameOver;
     public static GameManager Instance;
+    public GameObject pauseMenuScreen;
 
     private void Awake()
     {
@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     }
     public void StartGame()
     {
-        SceneManager.LoadScene(startingSceneIndex);
+        SceneManager.LoadScene("SpawnRoom");
     }
     public void Quit()
     {
@@ -37,11 +37,13 @@ public class GameManager : MonoBehaviour
     public void PauseGame()
     {
         Time.timeScale = 0f;
+        pauseMenuScreen.SetActive(true);
     }
 
     public void ResumeGame()
     {
         Time.timeScale = 1f;
+        pauseMenuScreen.SetActive(false);
     }
 
     public bool isGameOver()
