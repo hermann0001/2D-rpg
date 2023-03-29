@@ -27,7 +27,6 @@ public class HealthManager : MonoBehaviour
     public void TakeDamage()
     {
         currentHealth = Mathf.Clamp(currentHealth - 1, 0, startingHealth);
-        Debug.Log(currentHealth);
         if(currentHealth > 0)
         {
             //play sound hurt

@@ -2,23 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    private bool _isGameOver;
     public static GameManager Instance;
-    public GameObject pauseMenuScreen;
+    [SerializeField] private Slider audioSlider;
+    [SerializeField] private Slider volumeSlider;
 
     private void Awake()
     {
-        if(Instance == null)
-        {
-            DontDestroyOnLoad(gameObject);
-            Instance = this;
-        }else if(Instance != this)
+        if (Instance != null)
         {
             Destroy(gameObject);
+            return;
         }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
+    public void Start()
+    {
     }
     public void StartGame()
     {
@@ -31,25 +36,30 @@ public class GameManager : MonoBehaviour
 
     public void LoadMenu()
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene("Menu");
     }
 
-    public void PauseGame()
+    public void PauseGame(GameObject pauseMenuScreen)
     {
         Time.timeScale = 0f;
         pauseMenuScreen.SetActive(true);
     }
 
-    public void ResumeGame()
+    public void ResumeGame(GameObject pauseMenuScreen)
     {
         Time.timeScale = 1f;
         pauseMenuScreen.SetActive(false);
     }
 
-    public bool isGameOver()
+    public void GameOver(GameObject gameOverScreen)
     {
-        return _isGameOver;
+        gameOverScreen.SetActive(true);
     }
 
-
+    public void Retry(GameObject gameOverScreen)
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        gameOverScreen.SetActive(false);
+    }
 }

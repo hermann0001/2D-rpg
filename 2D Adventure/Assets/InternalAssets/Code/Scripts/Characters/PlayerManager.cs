@@ -7,33 +7,30 @@ public class PlayerManager : MonoBehaviour
 {
     public GameObject pauseMenuScreen;
     public GameObject gameOverScreen;
-    public void ReturnTitle()
-    {
-        SceneManager.LoadScene("Menu");
-        gameOverScreen.SetActive(false);
-    }
-
     public void Pause()
     {
-        Time.timeScale = 0;
-        pauseMenuScreen.SetActive(true);
+        GameManager.Instance.PauseGame(pauseMenuScreen);
     }
 
     public void Resume()
     {
-        Time.timeScale = 1f;
-        pauseMenuScreen.SetActive(false);
+        GameManager.Instance.ResumeGame(pauseMenuScreen);
     }
 
     public void GameOver()
     {
-        gameOverScreen.SetActive(true);
+        GameManager.Instance.GameOver(gameOverScreen);
     }
 
     public void Retry()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        gameOverScreen.SetActive(false);
+        GameManager.Instance.Retry(gameOverScreen);
     }
 
+    public void ReturnTitle()
+    {
+        Debug.Log("pressed");
+        GameManager.Instance.LoadMenu();
+        gameOverScreen.SetActive(false);
+    }
 }
