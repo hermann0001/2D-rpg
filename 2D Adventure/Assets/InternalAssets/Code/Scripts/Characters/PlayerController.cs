@@ -6,10 +6,12 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 1f;
     public float collisionOffset = 0.01f;
 
-    Vector2 movementInput;
+    
+    private Vector2 movementInput;
     private Rigidbody2D rb;
     public ContactFilter2D movementFilter;
-    private Animator animator;
+    [SerializeField] private Animator playerAnimator;
+    [SerializeField] private Animator controllerAnimator;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
     public VectorValue startingPosition;
 
@@ -21,7 +23,8 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
+        playerAnimator = GetComponent<Animator>();
+        controllerAnimator = GameObject.FindGameObjectWithTag("TouchController").GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         moveLeft = false;
         moveRight = false;
@@ -36,14 +39,14 @@ public class PlayerController : MonoBehaviour
 
         float horizontal = movementInput.x;
         float vertical = movementInput.y;
-        animator.SetFloat("Horizontal", movementInput.x);
-        animator.SetFloat("Vertical", movementInput.y);
-        animator.SetFloat("Speed", movementInput.sqrMagnitude);
+        playerAnimator.SetFloat("Horizontal", movementInput.x);
+        playerAnimator.SetFloat("Vertical", movementInput.y);
+        playerAnimator.SetFloat("Speed", movementInput.sqrMagnitude);
 
         if (horizontal != 0 || vertical != 0)
         {
-            animator.SetFloat("lastMoveX", horizontal);
-            animator.SetFloat("lastMoveY", vertical);
+            playerAnimator.SetFloat("lastMoveX", horizontal);
+            playerAnimator.SetFloat("lastMoveY", vertical);
         }
     }
 
@@ -113,38 +116,53 @@ public class PlayerController : MonoBehaviour
     public void OnPointerDownLeft()
     {
         moveLeft = true;
+        controllerAnimator.SetBool("left", moveLeft);
     }
 
     public void OnPointerUpLeft()
     {
         moveLeft = false;
+        controllerAnimator.SetBool("left", moveLeft);
+
     }
 
     public void OnPointerDownRight()
     {
         moveRight = true;
+        controllerAnimator.SetBool("right", moveRight);
+
     }
 
     public void OnPointerUpRight()
     {
         moveRight = false;
+        controllerAnimator.SetBool("right", moveRight);
+
     }
     public void OnPointerUpDown()
     {
         moveDown = false;
+        controllerAnimator.SetBool("down", moveDown);
+
     }
     public void OnPointerDownDown()
     {
         moveDown = true;
+        controllerAnimator.SetBool("down", moveDown);
+
     }
 
     public void OnPointerDownUp()
     {
         moveUp = true;
+        controllerAnimator.SetBool("up", moveUp);
+
     }
 
     public void OnPointerUpUp()
     {
         moveUp = false;
+        controllerAnimator.SetBool("up", moveUp);
+
     }
 }

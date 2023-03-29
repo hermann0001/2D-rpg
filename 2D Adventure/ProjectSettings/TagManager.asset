@@ -8,6 +8,7 @@ TagManager:
   - DialogueSystem
   - MusicSlider
   - VolumeSlider
+  - TouchController
   layers:
   - Default
   - TransparentFX
