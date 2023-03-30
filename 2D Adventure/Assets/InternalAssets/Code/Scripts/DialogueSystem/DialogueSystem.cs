@@ -8,26 +8,26 @@ public class DialogueSystem : MonoBehaviour
 {
     [HideInInspector]
     public static DialogueSystem Instance { get; set; }
-    public GameObject dialoguePanel;
-    public string npcName;
-    public List<string> dialogueLines = new List<string>();
-    public AudioClip sound;
-    public Button skipButton;
 
-    public Text textHolder, textName;
-    public float delay;
+    [SerializeField]
+    public GameObject dialoguePanel;                               //the entire panel
+    public Button skipButton;                                       //an invisible button to skip
+    private Text textHolder, textName;                              //textHolder is the text box where main text will be shown; textName is the text box where the name of who is talking will be shown
+    private string npcName;                                         //this is the name of who is talking         
+    private List<string> dialogueLines = new List<string>();        //this is the text that will be written in the textHolder
+    private AudioClip sound;                                        //a sound for each character displayed
+    private float delay;                                            //delay between each charater displayed
+    private Image imageHolder;                                      //an holder for the npc image 
 
     private int index;
-
-    public Image imageHolder;
 
     // Start is called before the first frame update
     private void Awake()
     {
+        dialoguePanel.SetActive(false);
         textHolder = dialoguePanel.transform.Find("Text").GetComponent<Text>(); //dialoguePanel.transform.FindChild("Text").GetComponent<Text>();
         textName = dialoguePanel.transform.Find("Name").GetComponent<Text>();
-        imageHolder = dialoguePanel.transform.Find("NpcImage").GetComponent<Image>(); //dialoguePanel.transform.FindChild("Image").GetComponent<Text>();
-        dialoguePanel.SetActive(false);
+        imageHolder = dialoguePanel.transform.Find("NpcImage").GetComponent<Image>(); //dialoguePanel.transform.FindChild("Image").GetComponent<Text
         skipButton = dialoguePanel.transform.Find("Skip").GetComponent<Button>();
         skipButton.onClick.AddListener(delegate { CompleteOrSkip(); });
 
@@ -41,24 +41,34 @@ public class DialogueSystem : MonoBehaviour
     {
         index = 0;
 
-        this.npcName = name;
+        //this.npcName = name
         imageHolder.sprite = characterSprite;
         imageHolder.preserveAspect = true;
+
         textHolder.color = textColor;
         textHolder.font = textFont;
         textHolder.text = String.Empty;
+
+        textName.text = name;
         textName.font = textFont;
+
         this.sound = sound;
 
         dialogueLines = new List<string>(lines.Length);
         dialogueLines.AddRange(lines);
+
+        if (npcName == null)
+            dialoguePanel.transform.Find("Name").gameObject.SetActive(false);
+        if (imageHolder.sprite == null)
+            dialoguePanel.transform.Find("NpcImage").gameObject.SetActive(false);
+            
 
         createDialogue();
     }
 
     public void createDialogue()
     {
-        textName.text = npcName;
+        //textName.text = npcName;
         dialoguePanel.SetActive(true);
         StartCoroutine(TypeLine());
     }
