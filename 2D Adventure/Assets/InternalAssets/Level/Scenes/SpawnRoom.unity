@@ -6461,14 +6461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 931271976}
-  npcName: 
-  dialogueLines: []
-  sound: {fileID: 0}
   skipButton: {fileID: 0}
-  textHolder: {fileID: 0}
-  textName: {fileID: 0}
-  delay: 0.1
-  imageHolder: {fileID: 0}
 --- !u!1 &1984889107
 GameObject:
   m_ObjectHideFlags: 0
@@ -7199,11 +7192,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3606239561792022069, guid: a93d896243a1154459e0858d2eb95714, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.993
+      value: 1.61
       objectReference: {fileID: 0}
     - target: {fileID: 3606239561792022069, guid: a93d896243a1154459e0858d2eb95714, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.589
+      value: -2.04
       objectReference: {fileID: 0}
     - target: {fileID: 3606239561792022069, guid: a93d896243a1154459e0858d2eb95714, type: 3}
       propertyPath: m_LocalPosition.z
