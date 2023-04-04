@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NPC : MonoBehaviour
+public class NPC : MonoBehaviour, IInteractable
 {
     private bool playerIsClose;
     private bool startedTalking;
@@ -26,7 +26,7 @@ public class NPC : MonoBehaviour
     [SerializeField]
     private Sprite characterSprite;
 
-    public void Talk()
+    public void Interact()
     {
         if (playerIsClose)
         {
@@ -59,4 +59,9 @@ public class NPC : MonoBehaviour
     }
 
     private void Skip() { DialogueSystem.Instance.skipButton.onClick.Invoke(); }
+
+    public bool CanInteract()
+    {
+        throw new System.NotImplementedException();
+    }
 }
