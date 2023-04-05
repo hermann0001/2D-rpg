@@ -2010,6 +2010,7 @@ GameObject:
   - component: {fileID: 606959788}
   - component: {fileID: 606959789}
   - component: {fileID: 606959790}
+  - component: {fileID: 606959791}
   m_Layer: 0
   m_Name: InteractionDetector
   m_TagString: Untagged
@@ -2045,7 +2046,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.013250753, y: -0.000000067055225}
+  m_Offset: {x: -0.010091066, y: -0.019621313}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2056,8 +2057,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.44411907, y: 0.45921588}
-  m_EdgeRadius: 0.1
+  m_Size: {x: 1.0953236, y: 1.1549002}
+  m_EdgeRadius: 0
 --- !u!114 &606959790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2070,6 +2071,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8fdb76059c6d864dae9aa3acc702cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &606959791
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606959787}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &649847331
 GameObject:
   m_ObjectHideFlags: 0
@@ -6967,7 +6989,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2114895370}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.93, y: -1.3, z: -9.904407}
+  m_LocalPosition: {x: 1.839, y: -1.3, z: -9.904407}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6986,7 +7008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46eb47dbb581fc74ebae212985257e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: {x: 1.93, y: -1.3}
+  position: {x: 1.839, y: -1.3}
 --- !u!1 &2140579516
 GameObject:
   m_ObjectHideFlags: 0
@@ -7152,7 +7174,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156132670636222585}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0

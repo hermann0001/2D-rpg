@@ -33,7 +33,7 @@ public class PC : MonoBehaviour, IInteractable
     private void OnTriggerExit2D(Collider2D collision)
     {
         Debug.Log(collision.ToString());
-        //if (collision.CompareTag("Player"))
+        //if (collision.CompareTag("InteractionDetector"))
         //{
             is_interacted = false;
             animator.SetBool("interacted", false);
