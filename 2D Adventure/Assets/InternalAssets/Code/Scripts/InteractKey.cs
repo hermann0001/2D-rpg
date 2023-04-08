@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InteractKey : MonoBehaviour
 {
-    public void Interact()
-    {
+    public static bool is_pressed;
+    
 
-    }
 }

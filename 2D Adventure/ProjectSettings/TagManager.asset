@@ -9,6 +9,8 @@ TagManager:
   - MusicSlider
   - VolumeSlider
   - TouchController
+  - InteractionDetector
+  - TouchInteract
   layers:
   - Default
   - TransparentFX

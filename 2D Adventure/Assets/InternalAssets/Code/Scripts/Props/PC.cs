@@ -21,22 +21,21 @@ public class PC : MonoBehaviour, IInteractable
     // Start is called before the first frame update
     void Start()
     {
-        animator =  GetComponent<Animator>();  
+        animator = GetComponent<Animator>();  
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(is_interacted);
+       
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log(collision.ToString());
-        //if (collision.CompareTag("InteractionDetector"))
-        //{
+        if (collision.CompareTag("InteractionDetector"))
+        {
             is_interacted = false;
             animator.SetBool("interacted", false);
-        //}
+        }
     }
 }
