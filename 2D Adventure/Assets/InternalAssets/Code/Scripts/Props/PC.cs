@@ -13,7 +13,6 @@ public class PC : MonoBehaviour, IInteractable
 
     void IInteractable.Interact()
     {
-        Debug.Log("interacted!");
         is_interacted = true;
         animator.SetBool("interacted", true);
     }

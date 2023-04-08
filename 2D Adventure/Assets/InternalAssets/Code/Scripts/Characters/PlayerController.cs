@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,17 +10,40 @@ public class PlayerController : MonoBehaviour
     
     private Vector2 movementInput;
     private Rigidbody2D rb;
-    public ContactFilter2D movementFilter;
+    private ContactFilter2D movementFilter;
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private Animator controllerAnimator;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
     public VectorValue startingPosition;
-
+    public PlayerInputActions playerControls;
+    private InputAction move;
+    public static InputAction interact;
 
     private bool moveLeft;
     private bool moveRight;
     private bool moveUp;
     private bool moveDown;
+
+    private void OnEnable()
+    {
+        move = playerControls.Player.Move;
+        move.Enable();
+
+        interact = playerControls.Player.Interact;
+        interact.Enable();
+        interact.performed += Interact;
+    }
+
+    private void OnDisable()
+    {
+        move.Disable();
+        interact.Disable();
+    }
+
+    private void Awake()
+    {
+        playerControls = new PlayerInputActions();
+    }
 
     private void Start()
     {
@@ -35,7 +59,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        MovementPlayer();
+        //MovementPlayer();
+        movementInput = move.ReadValue<Vector2>();
 
         float horizontal = movementInput.x;
         float vertical = movementInput.y;
@@ -88,29 +113,34 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void MovementPlayer()
+    private void Interact(InputAction.CallbackContext context)
     {
-        if (moveLeft)
-        {
-            movementInput = new Vector2(-1, 0);
-        }
-        else if (moveRight)
-        {
-            movementInput = new Vector2(1, 0);
-        }
-        else if (moveUp)
-        {
-            movementInput = new Vector2(0, 1);
-        }
-        else if (moveDown)
-        {
-            movementInput = new Vector2(0, -1);
-        }
-        else
-        {
-            movementInput = Vector2.zero;
-        }
+        Debug.Log("interact!");
     }
+
+    //private void MovementPlayer()
+    //{
+    //    if (moveLeft)
+    //    {
+    //        movementInput = new Vector2(-1, 0);
+    //    }
+    //    else if (moveRight)
+    //    {
+    //        movementInput = new Vector2(1, 0);
+    //    }
+    //    else if (moveUp)
+    //    {
+    //        movementInput = new Vector2(0, 1);
+    //    }
+    //    else if (moveDown)
+    //    {
+    //        movementInput = new Vector2(0, -1);
+    //    }
+    //    else
+    //    {
+    //        movementInput = Vector2.zero;
+    //    }
+    //}
 
     //OnPointer<Down:Press; Up:Release><Direction>
     public void OnPointerDownLeft()
@@ -163,6 +193,5 @@ public class PlayerController : MonoBehaviour
     {
         moveUp = false;
         controllerAnimator.SetBool("up", moveUp);
-
     }
 }

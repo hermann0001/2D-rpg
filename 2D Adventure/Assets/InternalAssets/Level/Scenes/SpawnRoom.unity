@@ -836,6 +836,7 @@ GameObject:
   - component: {fileID: 290309793}
   - component: {fileID: 290309792}
   - component: {fileID: 290309795}
+  - component: {fileID: 290309796}
   m_Layer: 5
   m_Name: ArrowKey LEFT
   m_TagString: Untagged
@@ -990,6 +991,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &290309796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290309790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: <Keyboard>/a
 --- !u!1 &325912849
 GameObject:
   m_ObjectHideFlags: 0
@@ -4092,6 +4106,7 @@ GameObject:
   - component: {fileID: 1164687861}
   - component: {fileID: 1164687860}
   - component: {fileID: 1164687863}
+  - component: {fileID: 1164687864}
   m_Layer: 5
   m_Name: ArrowKey UP
   m_TagString: Untagged
@@ -4246,6 +4261,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1164687864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164687858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: <Keyboard>/w
 --- !u!1 &1228497632
 GameObject:
   m_ObjectHideFlags: 0
@@ -4682,6 +4710,7 @@ GameObject:
   - component: {fileID: 1274687783}
   - component: {fileID: 1274687782}
   - component: {fileID: 1274687785}
+  - component: {fileID: 1274687786}
   m_Layer: 5
   m_Name: ArrowKey DOWN
   m_TagString: Untagged
@@ -4836,6 +4865,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1274687786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274687780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: <Keyboard>/s
 --- !u!1 &1355660677
 GameObject:
   m_ObjectHideFlags: 0
@@ -5214,6 +5256,7 @@ GameObject:
   - component: {fileID: 1516512367}
   - component: {fileID: 1516512366}
   - component: {fileID: 1516512369}
+  - component: {fileID: 1516512370}
   m_Layer: 5
   m_Name: ArrowKey RIGHT
   m_TagString: Untagged
@@ -5368,6 +5411,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1516512370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516512364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: <Keyboard>/d
 --- !u!1 &1545906408
 GameObject:
   m_ObjectHideFlags: 0
@@ -6764,19 +6820,7 @@ MonoBehaviour:
   - eventID: 4
     callback:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1984889107}
-          m_TargetAssemblyTypeName: NPC, Assembly-CSharp
-          m_MethodName: 
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
 --- !u!114 &1984889113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6786,9 +6830,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1984889107}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 284b77c3dd4e30446848f2fef66d6867, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ControlPath: <Keyboard>/enter
 --- !u!1 &2001221644
 GameObject:
   m_ObjectHideFlags: 0
@@ -7170,7 +7215,6 @@ GameObject:
   - component: {fileID: 5714551296228838192}
   - component: {fileID: 769339244469091236}
   - component: {fileID: 5523561302553199416}
-  - component: {fileID: 6968155738893281287}
   - component: {fileID: 6968155738893281286}
   - component: {fileID: 6968155738893281288}
   m_Layer: 0
@@ -7462,53 +7506,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   collisionOffset: 0.012
-  movementFilter:
-    useTriggers: 0
-    useLayerMask: 0
-    useDepth: 0
-    useOutsideDepth: 0
-    useNormalAngle: 0
-    useOutsideNormalAngle: 0
-    layerMask:
-      serializedVersion: 2
-      m_Bits: 0
-    minDepth: 0
-    maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
   playerAnimator: {fileID: 0}
   controllerAnimator: {fileID: 0}
   startingPosition: {fileID: 11400000, guid: 2208439fa0d1d6e47b0b0f80eced9208, type: 2}
---- !u!114 &6968155738893281287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 156132670636222585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 9e7d1d16ab56dd8438701e9cf1595c79, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!114 &6968155738893281288
 MonoBehaviour:
   m_ObjectHideFlags: 0
