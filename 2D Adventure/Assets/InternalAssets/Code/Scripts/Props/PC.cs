@@ -32,17 +32,9 @@ public class PC : MonoBehaviour, IInteractable
             Skip();
         
     }
-
-    // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();  
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
     }
 
     private void OnTriggerExit2D(Collider2D collision)

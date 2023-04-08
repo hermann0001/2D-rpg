@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/InternalAssets/Level/Scenes/Level0.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/InternalAssets/Level/Scenes/ControllRoom.unity
+    path: Assets/InternalAssets/Level/Scenes/ControlRoom.unity
     guid: e1d54e8bf00c86f41b2267850218159c
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: b773c4ff146a1844088d8a2ed3475da9, type: 2}

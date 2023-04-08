@@ -24,6 +24,7 @@ public class DialogueSystem : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
+        dialoguePanel = GameObject.FindGameObjectWithTag("DialoguePanel");
         dialoguePanel.SetActive(false);
         textHolder = dialoguePanel.transform.Find("Text").GetComponent<Text>(); //dialoguePanel.transform.FindChild("Text").GetComponent<Text>();
         textName = dialoguePanel.transform.Find("Name").GetComponent<Text>();

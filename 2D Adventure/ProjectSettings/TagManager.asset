@@ -4,13 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - NPC1_speech
   - DialogueSystem
   - MusicSlider
   - VolumeSlider
   - TouchController
   - InteractionDetector
-  - TouchInteract
+  - DialoguePanel
   layers:
   - Default
   - TransparentFX
