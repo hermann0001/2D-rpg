@@ -690,6 +690,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b80ec62531cda469422fa6077e3703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogue:
+  - Ciao sono un pc
+  dialogueColor: {r: 1, g: 1, b: 1, a: 1}
+  dialogueFont: {fileID: 12800000, guid: 87b40be68dab14e42bf6fe5ea6608794, type: 3}
 --- !u!1 &272022929
 GameObject:
   m_ObjectHideFlags: 0
@@ -2060,7 +2064,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.010091066, y: -0.019621313}
+  m_Offset: {x: -0.008371115, y: 0.011140659}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2071,7 +2075,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0953236, y: 1.1549002}
+  m_Size: {x: 0.29807037, y: 0.51720095}
   m_EdgeRadius: 0
 --- !u!114 &606959790
 MonoBehaviour:
@@ -5850,8 +5854,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.859, y: -9.077}
-  m_SizeDelta: {x: 461.009, y: 101.738}
+  m_AnchoredPosition: {x: 14.2917, y: -8}
+  m_SizeDelta: {x: 400, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1706248383
 MonoBehaviour:
@@ -5875,7 +5879,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 16
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -5886,7 +5890,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 2
-  m_Text: 
+  m_Text: prova
 --- !u!222 &1706248384
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6681,6 +6685,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 931271976}
   skipButton: {fileID: 0}
+  textHolder: {fileID: 0}
+  textName: {fileID: 0}
+  npcName: 
+  dialogueLines: []
+  sound: {fileID: 0}
+  delay: 0.1
+  imageHolder: {fileID: 0}
 --- !u!1 &1984889107
 GameObject:
   m_ObjectHideFlags: 0

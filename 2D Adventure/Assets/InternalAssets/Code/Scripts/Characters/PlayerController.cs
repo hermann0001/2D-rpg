@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour
 
     private void Interact(InputAction.CallbackContext context)
     {
-        Debug.Log("interact!");
+        return;
     }
 
     //private void MovementPlayer()

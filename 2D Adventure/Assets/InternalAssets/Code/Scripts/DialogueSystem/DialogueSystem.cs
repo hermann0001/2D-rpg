@@ -7,17 +7,17 @@ using UnityEngine.UI;
 public class DialogueSystem : MonoBehaviour
 {
     [HideInInspector]
-    public static DialogueSystem Instance { get; set; }
+    public static DialogueSystem Instance { get; private set; }                     //singleton class
 
-    [SerializeField]
-    public GameObject dialoguePanel;                               //the entire panel
-    public Button skipButton;                                       //an invisible button to skip
-    private Text textHolder, textName;                              //textHolder is the text box where main text will be shown; textName is the text box where the name of who is talking will be shown
-    private string npcName;                                         //this is the name of who is talking         
-    private List<string> dialogueLines = new List<string>();        //this is the text that will be written in the textHolder
-    private AudioClip sound;                                        //a sound for each character displayed
-    private float delay;                                            //delay between each charater displayed
-    private Image imageHolder;                                      //an holder for the npc image 
+    public GameObject dialoguePanel;                                                //the entire panel
+    public Button skipButton;                                                       //an invisible button to skip
+
+    [SerializeField] private Text textHolder, textName;                              //textHolder is the text box where main text will be shown; textName is the text box where the name of who is talking will be shown
+    [SerializeField] private string npcName;                                         //this is the name of who is talking         
+    [SerializeField] private List<string> dialogueLines = new List<string>();        //this is the text that will be written in the textHolder
+    [SerializeField] private AudioClip sound;                                        //a sound for each character displayed
+    [SerializeField] private float delay;                                            //delay between each charater displayed
+    [SerializeField] private Image imageHolder;                                      //an holder for the npc image 
 
     private int index;
 
@@ -37,6 +37,7 @@ public class DialogueSystem : MonoBehaviour
             Instance = this;
     }
 
+    //overload dialogue with npc
     public void addNewDialogue(string[] lines, string name, Sprite characterSprite, Color textColor, Font textFont, AudioClip sound)
     {
         index = 0;
@@ -57,11 +58,23 @@ public class DialogueSystem : MonoBehaviour
         dialogueLines = new List<string>(lines.Length);
         dialogueLines.AddRange(lines);
 
-        if (npcName == null)
-            dialoguePanel.transform.Find("Name").gameObject.SetActive(false);
-        if (imageHolder.sprite == null)
-            dialoguePanel.transform.Find("NpcImage").gameObject.SetActive(false);
-            
+        createDialogue();
+    }
+
+    //overload for dialogue with props
+    public void addNewDialogue(string[] lines, Color textColor, Font textFont)
+    {
+        index = 0;
+
+        textHolder.color = textColor;
+        textHolder.font = textFont;
+        textHolder.text = String.Empty;
+
+        dialogueLines = new List<string>(lines.Length);
+        dialogueLines.AddRange(lines);
+
+        dialoguePanel.transform.Find("Name").gameObject.SetActive(false);
+        dialoguePanel.transform.Find("NpcImage").gameObject.SetActive(false);
 
         createDialogue();
     }
@@ -79,7 +92,8 @@ public class DialogueSystem : MonoBehaviour
         foreach (char c in dialogueLines[index].ToCharArray())
         {
             textHolder.text += c;
-            SoundManager.Instance.PlaySound(sound);
+            if(this.sound != null)
+                SoundManager.Instance.PlaySound(sound);
             yield return new WaitForSeconds(delay);
         }
     }

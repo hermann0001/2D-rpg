@@ -6,6 +6,15 @@ public class PC : MonoBehaviour, IInteractable
 {
     private Animator animator;
     private bool is_interacted;
+
+    [Header("Dialogue")]
+    [SerializeField]
+    private string[] dialogue;
+    [SerializeField]
+    private Color dialogueColor;
+    [SerializeField]
+    private Font dialogueFont;
+
     bool IInteractable.CanInteract()
     {
         return !is_interacted;
@@ -13,8 +22,15 @@ public class PC : MonoBehaviour, IInteractable
 
     void IInteractable.Interact()
     {
-        is_interacted = true;
-        animator.SetBool("interacted", true);
+        if (!is_interacted)
+        {
+            is_interacted = true;
+            animator.SetBool("interacted", true);
+            DialogueSystem.Instance.addNewDialogue(dialogue, dialogueColor, dialogueFont);
+        }
+        else
+            Skip();
+        
     }
 
     // Start is called before the first frame update
@@ -35,6 +51,11 @@ public class PC : MonoBehaviour, IInteractable
         {
             is_interacted = false;
             animator.SetBool("interacted", false);
+            DialogueSystem.Instance.dialoguePanel.SetActive(false);
+            //SoundManager.Instance.StopSound();
+            DialogueSystem.Instance.StopAllCoroutines();
         }
     }
+
+    private void Skip() { DialogueSystem.Instance.skipButton.onClick.Invoke(); }
 }
