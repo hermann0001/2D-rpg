@@ -9,8 +9,6 @@ public class PlayerManager : MonoBehaviour
     public GameObject gameOverScreen;
     public void Pause()
     {
-        Debug.Log(pauseMenuScreen);
-
         GameManager.Instance.PauseGame(pauseMenuScreen);    
     }
 

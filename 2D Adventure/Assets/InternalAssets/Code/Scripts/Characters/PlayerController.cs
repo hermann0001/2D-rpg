@@ -153,7 +153,6 @@ public class PlayerController : MonoBehaviour
     {
         moveLeft = false;
         controllerAnimator.SetBool("left", moveLeft);
-
     }
 
     public void OnPointerDownRight()

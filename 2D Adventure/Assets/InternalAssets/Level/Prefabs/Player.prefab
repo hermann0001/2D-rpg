@@ -107,7 +107,6 @@ GameObject:
   - component: {fileID: 3146724095006049347}
   - component: {fileID: 7899864251146206431}
   - component: {fileID: 4734841949959362529}
-  - component: {fileID: 4734841949959362543}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -265,19 +264,4 @@ MonoBehaviour:
   moveSpeed: 1
   collisionOffset: 0.012
   playerAnimator: {fileID: 0}
-  controllerAnimator: {fileID: 0}
   startingPosition: {fileID: 11400000, guid: 2208439fa0d1d6e47b0b0f80eced9208, type: 2}
---- !u!114 &4734841949959362543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2534652226031163294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 743b2bb2b8ba1414784867d7cc22f67e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 3
-  playerManager: {fileID: 0}
