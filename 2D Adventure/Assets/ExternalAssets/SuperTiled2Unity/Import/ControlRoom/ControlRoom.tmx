@@ -1577,11 +1577,11 @@
   <object id="35" x="2031.5" y="917" width="17" height="11"/>
   <object id="36" x="2128.5" y="918" width="14.5" height="10"/>
   <object id="37" x="2227" y="920.5" width="11" height="7"/>
-  <object id="38" x="2321" y="918" width="12.5" height="10"/>
+  <object id="38" x="2321" y="912.091" width="13.8636" height="15.9091"/>
   <object id="39" x="1711" y="1149.5" width="475" height="19"/>
   <object id="40" x="2186.5" y="1149.5" width="212" height="19"/>
   <object id="41" x="1711.33" y="892.667" width="686" height="21.3333"/>
-  <object id="42" x="1697.33" y="910" width="13.3333" height="44.6667"/>
+  <object id="42" x="1695.97" y="910" width="15.8788" height="82.2122"/>
   <object id="43" x="1696" y="1046" width="14.6667" height="120"/>
   <object id="44" x="1633.33" y="883.333" width="62" height="26.6667"/>
   <object id="46" x="1616" y="800.667" width="14.6667" height="92.6667"/>
@@ -1696,7 +1696,6 @@
   <object id="168" x="1632.5" y="1120.5" width="14.25" height="49.25"/>
   <object id="169" x="1648" y="1151.25" width="64.5" height="17"/>
   <object id="170" x="1694.75" y="874.5" width="16.75" height="38.5"/>
-  <object id="171" x="1696" y="953.5" width="14.5" height="94.25"/>
   <object id="172" x="946.25" y="1495" width="11.25" height="10.25"/>
   <object id="173" x="1075" y="1496" width="10.75" height="9.25"/>
   <object id="174" x="959.75" y="1167.25" width="12.25" height="15.25"/>

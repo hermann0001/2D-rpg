@@ -16,15 +16,12 @@ public class Door : MonoBehaviour, IInteractable
     {
         is_interacted = true;
         animator.SetBool("interacted", true);
-
-        boxCollider.enabled = false;
     }
 
     void Start()
     {
         animator = GetComponent<Animator>();
-        boxCollider = GetComponent<BoxCollider2D>();
-        Debug.Log(boxCollider.ToString());
+        boxCollider = GetComponent<BoxCollider2D>();  
     }
 
     private void OnTriggerExit2D(Collider2D collision)
