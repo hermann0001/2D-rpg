@@ -62,13 +62,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update()
-    {
-        if (!PlayerManager.firstDialogueShown)
-        {
-            PlayerManager.firstDialogueShown = true;
-            StartCoroutine(PlayerManager.Instance.CreateFirstDialogue());
-        }
-
+    { 
         //MovementPlayer();
         movementInput = move.ReadValue<Vector2>();
 

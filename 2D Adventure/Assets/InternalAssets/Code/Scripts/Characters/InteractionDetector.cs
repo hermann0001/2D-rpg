@@ -8,15 +8,21 @@ public class InteractionDetector : MonoBehaviour
 {
     private List<IInteractable> interactable_in_range = new List<IInteractable>();
 
+    private void Start()
+    {
+        interactable_in_range.Add(transform.GetComponentInParent<IInteractable>());
+    }
+
     // Update is called once per frame
     void Update()
     {
         if(PlayerController.interact.WasPerformedThisFrame() && interactable_in_range.Count > 0)
         {
             var interactable = interactable_in_range[0];
+            Debug.Log(interactable.ToString());
             interactable.Interact();
-            //if (!interactable.CanInteract())
-            //    interactable_in_range.Remove(interactable);
+            if (!interactable.CanInteract())
+                interactable_in_range.Remove(interactable);
         }
     }
 

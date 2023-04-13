@@ -10,6 +10,7 @@ TagManager:
   - TouchController
   - InteractionDetector
   - DialoguePanel
+  - Controller
   layers:
   - Default
   - TransparentFX

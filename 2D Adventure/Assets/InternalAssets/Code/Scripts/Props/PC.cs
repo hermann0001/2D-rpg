@@ -8,12 +8,9 @@ public class PC : MonoBehaviour, IInteractable
     private bool is_interacted;
 
     [Header("Dialogue")]
-    [SerializeField]
-    private string[] dialogue;
-    [SerializeField]
-    private Color dialogueColor;
-    [SerializeField]
-    private Font dialogueFont;
+    [SerializeField] private string[] dialogue;
+    [SerializeField] private Color dialogueColor;
+    [SerializeField] private Font dialogueFont;
 
     bool IInteractable.CanInteract()
     {

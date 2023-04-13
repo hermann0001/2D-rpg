@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,10 +10,6 @@ public class PlayerManager : MonoBehaviour
 
     public GameObject pauseMenuScreen;
     public GameObject gameOverScreen;
-
-    [SerializeField] private Sprite dialogueSpriteIcon;
-    [SerializeField] private Font dialogueFont;
-    [SerializeField] private Color dialogueTextColor;
 
     public static bool firstDialogueShown = false;
 
@@ -53,12 +50,5 @@ public class PlayerManager : MonoBehaviour
         Debug.Log("pressed");
         GameManager.Instance.LoadMenu();
         gameOverScreen.SetActive(false);
-    }
-
-    public IEnumerator CreateFirstDialogue()
-    {
-        yield return new WaitForSecondsRealtime(3f);
-        string[] lines = { "dovrei controllare l'ordine del giorno..." };
-        DialogueSystem.Instance.addNewDialogue(lines, "Anastasia", dialogueSpriteIcon, dialogueTextColor, dialogueFont, null);
     }
 }

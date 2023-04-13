@@ -14,10 +14,6 @@ public class NPC : MonoBehaviour, IInteractable
     [SerializeField]
     private Font textFont;
 
-    [Header("Name")]
-    [SerializeField]
-    private string npcName;
-
     [Header("Sound")]
     [SerializeField]
     private AudioClip sound;
@@ -33,7 +29,7 @@ public class NPC : MonoBehaviour, IInteractable
             if (!startedTalking)
             {
                 startedTalking = true;
-                DialogueSystem.Instance.addNewDialogue(dialogue, npcName, characterSprite, textColor, textFont, sound);
+                DialogueSystem.Instance.addNewDialogue(dialogue, characterSprite, textColor, textFont, sound);
             }
             else
                 Skip();

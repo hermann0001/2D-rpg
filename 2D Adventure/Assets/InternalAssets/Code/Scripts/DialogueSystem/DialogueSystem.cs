@@ -13,22 +13,25 @@ public class DialogueSystem : MonoBehaviour
     public Button skipButton;                                                       //an invisible button to skip
 
     [SerializeField] private Text textHolder, textName;                              //textHolder is the text box where main text will be shown; textName is the text box where the name of who is talking will be shown
-    [SerializeField] private string npcName;                                         //this is the name of who is talking         
     [SerializeField] private List<string> dialogueLines = new List<string>();        //this is the text that will be written in the textHolder
     [SerializeField] private AudioClip sound;                                        //a sound for each character displayed
     [SerializeField] private float delay;                                            //delay between each charater displayed
     [SerializeField] private Image imageHolder;                                      //an holder for the npc image 
 
+    private GameObject controller;
+
     private int index;
+    
     private void Awake()
     {
+        index = 0;
         dialoguePanel = GameObject.FindGameObjectWithTag("DialoguePanel");
         dialoguePanel.SetActive(false);
         textHolder = dialoguePanel.transform.Find("Text").GetComponent<Text>(); //dialoguePanel.transform.FindChild("Text").GetComponent<Text>();
-        textName = dialoguePanel.transform.Find("Name").GetComponent<Text>();
         imageHolder = dialoguePanel.transform.Find("NpcImage").GetComponent<Image>(); //dialoguePanel.transform.FindChild("Image").GetComponent<Text
         skipButton = dialoguePanel.transform.Find("Skip").GetComponent<Button>();
         skipButton.onClick.AddListener(delegate { CompleteOrSkip(); });
+        controller = GameObject.FindGameObjectWithTag("TouchController");
 
         if (Instance != null && Instance != this)
             Destroy(gameObject);
@@ -37,9 +40,10 @@ public class DialogueSystem : MonoBehaviour
     }
 
     //overload dialogue with npc
-    public void addNewDialogue(string[] lines, string name, Sprite characterSprite, Color textColor, Font textFont, AudioClip sound)
+    public void addNewDialogue(string[] lines, Sprite characterSprite, Color textColor, Font textFont, AudioClip sound)
     {
         index = 0;
+
 
         //this.npcName = name
         imageHolder.sprite = characterSprite;
@@ -48,9 +52,6 @@ public class DialogueSystem : MonoBehaviour
         textHolder.color = textColor;
         textHolder.font = textFont;
         textHolder.text = String.Empty;
-
-        textName.text = name;
-        textName.font = textFont;
 
         this.sound = sound;
 
@@ -72,7 +73,6 @@ public class DialogueSystem : MonoBehaviour
         dialogueLines = new List<string>(lines.Length);
         dialogueLines.AddRange(lines);
 
-        dialoguePanel.transform.Find("Name").gameObject.SetActive(false);
         dialoguePanel.transform.Find("NpcImage").gameObject.SetActive(false);
 
         createDialogue();
@@ -82,6 +82,7 @@ public class DialogueSystem : MonoBehaviour
     {
         //textName.text = npcName;
         dialoguePanel.SetActive(true);
+        controller.SetActive(false);
         StartCoroutine(TypeLine());
     }
 
@@ -91,7 +92,7 @@ public class DialogueSystem : MonoBehaviour
         foreach (char c in dialogueLines[index].ToCharArray())
         {
             textHolder.text += c;
-            if(this.sound != null)
+            if(sound != null)
                 SoundManager.Instance.PlaySound(sound);
             yield return new WaitForSeconds(delay);
         }
@@ -99,12 +100,15 @@ public class DialogueSystem : MonoBehaviour
 
     private void CompleteOrSkip()
     {
-        if (textHolder.text.Equals(dialogueLines[index]))
-            NextLine();
-        else
+        if(dialogueLines.Count > 0)
         {
-            StopAllCoroutines();
-            textHolder.text = dialogueLines[index];
+            if (textHolder.text.Equals(dialogueLines[index]))
+                NextLine();
+            else
+            {
+                StopAllCoroutines();
+                textHolder.text = dialogueLines[index];
+            }
         }
     }
 
@@ -117,6 +121,15 @@ public class DialogueSystem : MonoBehaviour
             StartCoroutine(TypeLine());
         }
         else
+        {
             dialoguePanel.SetActive(false);
+            controller.SetActive(true);
+            sound = null;
+        }
+    }
+
+    public bool isPanelActive()
+    {
+        return dialoguePanel.activeSelf;
     }
 }
