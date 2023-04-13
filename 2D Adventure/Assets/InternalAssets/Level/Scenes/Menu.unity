@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3708985, g: 0.3783704, b: 0.35722548, a: 1}
+  m_IndirectSpecularColor: {r: 0.3708984, g: 0.37837017, b: 0.35722524, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3276,6 +3276,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8441156479174027315, guid: 608e1a94ec74e1f4abf0404428ef5980, type: 3}
+      propertyPath: spritesIcons.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441156479174027315, guid: 608e1a94ec74e1f4abf0404428ef5980, type: 3}
+      propertyPath: dialogueFonts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441156479174027315, guid: 608e1a94ec74e1f4abf0404428ef5980, type: 3}
+      propertyPath: spritesIcons.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4c5c64629d1b05d4ca524a9633de9338, type: 3}
+    - target: {fileID: 8441156479174027315, guid: 608e1a94ec74e1f4abf0404428ef5980, type: 3}
+      propertyPath: dialogueFonts.Array.data[0]
+      value: 
+      objectReference: {fileID: 12800000, guid: b240c70354ebf654c8a3f213aeaa5964, type: 3}
+    - target: {fileID: 8441156479174027315, guid: 608e1a94ec74e1f4abf0404428ef5980, type: 3}
+      propertyPath: dialogueSpritesIcons.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441156479174027315, guid: 608e1a94ec74e1f4abf0404428ef5980, type: 3}
+      propertyPath: dialogueSpritesIcons.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4c5c64629d1b05d4ca524a9633de9338, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 608e1a94ec74e1f4abf0404428ef5980, type: 3}
 --- !u!1 &1656488645

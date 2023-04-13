@@ -5,8 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
+    public static PlayerManager Instance;
+
     public GameObject pauseMenuScreen;
     public GameObject gameOverScreen;
+
+    [SerializeField] private Sprite dialogueSpriteIcon;
+    [SerializeField] private Font dialogueFont;
+    [SerializeField] private Color dialogueTextColor;
+
+    public static bool firstDialogueShown = false;
+
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
     public void Pause()
     {
         GameManager.Instance.PauseGame(pauseMenuScreen);    
@@ -32,5 +53,12 @@ public class PlayerManager : MonoBehaviour
         Debug.Log("pressed");
         GameManager.Instance.LoadMenu();
         gameOverScreen.SetActive(false);
+    }
+
+    public IEnumerator CreateFirstDialogue()
+    {
+        yield return new WaitForSecondsRealtime(3f);
+        string[] lines = { "dovrei controllare l'ordine del giorno..." };
+        DialogueSystem.Instance.addNewDialogue(lines, "Anastasia", dialogueSpriteIcon, dialogueTextColor, dialogueFont, null);
     }
 }

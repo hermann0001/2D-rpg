@@ -20,8 +20,6 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField] private Image imageHolder;                                      //an holder for the npc image 
 
     private int index;
-
-    // Start is called before the first frame update
     private void Awake()
     {
         dialoguePanel = GameObject.FindGameObjectWithTag("DialoguePanel");

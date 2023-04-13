@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -50,15 +51,24 @@ public class PlayerController : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
         controllerAnimator = GameObject.FindGameObjectWithTag("TouchController").GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+
+
         moveLeft = false;
         moveRight = false;
         moveUp = false;
         moveDown = false;
+
         transform.position = startingPosition.playerInitialValue;
     }
 
     void Update()
     {
+        if (!PlayerManager.firstDialogueShown)
+        {
+            PlayerManager.firstDialogueShown = true;
+            StartCoroutine(PlayerManager.Instance.CreateFirstDialogue());
+        }
+
         //MovementPlayer();
         movementInput = move.ReadValue<Vector2>();
 
@@ -117,6 +127,8 @@ public class PlayerController : MonoBehaviour
     {
         return;
     }
+
+    
 
     //private void MovementPlayer()
     //{
@@ -194,3 +206,5 @@ public class PlayerController : MonoBehaviour
         controllerAnimator.SetBool("up", moveUp);
     }
 }
+
+
