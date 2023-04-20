@@ -19,7 +19,6 @@ public class InteractionDetector : MonoBehaviour
         if(PlayerController.interact.WasPerformedThisFrame() && interactable_in_range.Count > 0)
         {
             var interactable = interactable_in_range[0];
-            Debug.Log(interactable.ToString());
             interactable.Interact();
             if (!interactable.CanInteract())
                 interactable_in_range.Remove(interactable);

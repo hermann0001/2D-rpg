@@ -5374,7 +5374,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 3
-  playerManager: {fileID: 1181823761}
 --- !u!4 &1181823763
 Transform:
   m_ObjectHideFlags: 0
@@ -7501,11 +7500,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 550111661722279467, guid: a93d896243a1154459e0858d2eb95714, type: 3}
       propertyPath: playerPosition.x
-      value: 6.301
+      value: 1.928
       objectReference: {fileID: 0}
     - target: {fileID: 550111661722279467, guid: a93d896243a1154459e0858d2eb95714, type: 3}
       propertyPath: playerPosition.y
-      value: -3.785
+      value: -2.288
       objectReference: {fileID: 0}
     - target: {fileID: 3606239561792022069, guid: a93d896243a1154459e0858d2eb95714, type: 3}
       propertyPath: m_RootOrder

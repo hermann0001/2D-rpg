@@ -14,7 +14,7 @@ public class PC : MonoBehaviour, IInteractable
 
     bool IInteractable.CanInteract()
     {
-        return !is_interacted;
+        return DialogueSystem.Instance.isPanelActive() || (!is_interacted);
     }
 
     void IInteractable.Interact()
@@ -24,6 +24,9 @@ public class PC : MonoBehaviour, IInteractable
             is_interacted = true;
             animator.SetBool("interacted", true);
             DialogueSystem.Instance.addNewDialogue(dialogue, dialogueColor, dialogueFont);
+            //GameObject.FindGameObjectWithTag("ExitBlock").GetComponent<BoxCollider2D>().enabled = false;
+            Destroy(GameObject.FindGameObjectWithTag("ExitBlock"));
+
         }
         else
             Skip();
