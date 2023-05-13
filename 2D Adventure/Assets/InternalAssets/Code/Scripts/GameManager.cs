@@ -56,14 +56,32 @@ public class GameManager : MonoBehaviour
 
     public void GameOver(GameObject gameOverScreen)
     {
+        AudioManager.instance.Stop();
         gameOverScreen.SetActive(true);
-        AudioManager.instance.Stop("DormsMusic");
+        AudioManager.instance.Play("GameOverMusic");
     }
 
     public void Retry(GameObject gameOverScreen)
     {
+        AudioManager.instance.Stop();
         AudioManager.instance.Play("Click");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        string activeSceneMusicName = getActiveSceneMusic();
+        Debug.Log(activeSceneMusicName);
+        AudioManager.instance.Play(activeSceneMusicName);
         gameOverScreen.SetActive(false);
+    }
+
+    private string getActiveSceneMusic()
+    { 
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "SpawnRoom":
+                return "SpawnRoomMusic";
+            case "Level0":
+                return "Level0Music";
+            default:
+                return null;
+        }
     }
 }

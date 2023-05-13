@@ -13,11 +13,13 @@ public class TouchControllerHandler : MonoBehaviour     //animation handler
     }
     public void Pressed(string direction)
     {
+        AudioManager.instance.Play("FootstepSound");
         touchController.SetBool(direction, true);
     }
 
     public void Released(string direction)
     {
+        AudioManager.instance.Stop("FootstepSound");
         touchController.SetBool(direction, false);
     }
 

@@ -19,6 +19,7 @@ public class PC : MonoBehaviour, IInteractable
 
     void IInteractable.Interact()
     {
+        AudioManager.instance.Play("MouseclickSound");
         if (!is_interacted)
         {
             is_interacted = true;

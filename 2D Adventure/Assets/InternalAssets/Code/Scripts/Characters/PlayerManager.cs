@@ -28,14 +28,19 @@ public class PlayerManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null)
+        if (Instance == null)
         {
-            Destroy(gameObject);
-            return;
+            //First run, set the instance
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
+        else if (Instance != this)
+        {
+            //Instance is not the same as the one we have, destroy old one, and reset to newest one
+            Destroy(Instance.gameObject);
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
         musicSliderText.text = ((int)Mathf.Lerp(0, 100f, musicSlider.value)).ToString() + "%";
         soundSliderText.text = ((int)Mathf.Lerp(0, 100f, soundSlider.value)).ToString() + "%";
     }
@@ -66,6 +71,7 @@ public class PlayerManager : MonoBehaviour
     public void GameOver()
     {
         GameManager.Instance.GameOver(gameOverPanel);
+        Destroy(player);
     }
 
     public void Retry()
@@ -78,7 +84,6 @@ public class PlayerManager : MonoBehaviour
         gameOverPanel.SetActive(false);
         GameManager.Instance.LoadMenu();
         Destroy(gameObject);
-        Destroy(player);
     }
 
     public void SetMusicVolume()

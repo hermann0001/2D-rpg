@@ -949,7 +949,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0, g: 0, b: 0, a: 0}
     m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0}
@@ -1029,32 +1029,32 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-          m_MethodName: OnPointerDownLeft
-          m_Mode: 1
+        - m_Target: {fileID: 2001221649}
+          m_TargetAssemblyTypeName: TouchControllerHandler, Assembly-CSharp
+          m_MethodName: Pressed
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: left
             m_BoolArgument: 0
           m_CallState: 2
   - eventID: 3
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-          m_MethodName: OnPointerUpLeft
-          m_Mode: 1
+        - m_Target: {fileID: 2001221649}
+          m_TargetAssemblyTypeName: TouchControllerHandler, Assembly-CSharp
+          m_MethodName: Released
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: left
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &290309796
@@ -1373,7 +1373,7 @@ GameObject:
   - component: {fileID: 438583913}
   - component: {fileID: 438583912}
   m_Layer: 5
-  m_Name: RestartButton
+  m_Name: RetryButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1444,7 +1444,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1094001810}
         m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
         m_MethodName: Retry
         m_Mode: 1
@@ -2026,6 +2026,10 @@ PrefabInstance:
     - target: {fileID: 5438182554599027100, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438182554599027101, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+      propertyPath: sounds.Array.data[5].loop
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
@@ -4110,7 +4114,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates: []
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2001221649}
+          m_TargetAssemblyTypeName: TouchControllerHandler, Assembly-CSharp
+          m_MethodName: Pressed
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: up
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2001221649}
+          m_TargetAssemblyTypeName: TouchControllerHandler, Assembly-CSharp
+          m_MethodName: Released
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: up
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1164687864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4607,7 +4643,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0, g: 0, b: 0, a: 0}
     m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0}
@@ -4687,32 +4723,32 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-          m_MethodName: OnPointerDownDown
-          m_Mode: 1
+        - m_Target: {fileID: 2001221649}
+          m_TargetAssemblyTypeName: TouchControllerHandler, Assembly-CSharp
+          m_MethodName: Pressed
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: down
             m_BoolArgument: 0
           m_CallState: 2
   - eventID: 3
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-          m_MethodName: OnPointerUpDown
-          m_Mode: 1
+        - m_Target: {fileID: 2001221649}
+          m_TargetAssemblyTypeName: TouchControllerHandler, Assembly-CSharp
+          m_MethodName: Released
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: down
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &1274687786
@@ -5153,7 +5189,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0, g: 0, b: 0, a: 0}
     m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0}
@@ -5233,32 +5269,32 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-          m_MethodName: OnPointerDownRight
-          m_Mode: 1
+        - m_Target: {fileID: 2001221649}
+          m_TargetAssemblyTypeName: TouchControllerHandler, Assembly-CSharp
+          m_MethodName: Pressed
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: right
             m_BoolArgument: 0
           m_CallState: 2
   - eventID: 3
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-          m_MethodName: OnPointerUpRight
-          m_Mode: 1
+        - m_Target: {fileID: 2001221649}
+          m_TargetAssemblyTypeName: TouchControllerHandler, Assembly-CSharp
+          m_MethodName: Released
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: right
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &1516512370
@@ -5912,7 +5948,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1094001810}
         m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
         m_MethodName: ReturnTitle
         m_Mode: 1
@@ -6589,6 +6625,7 @@ GameObject:
   - component: {fileID: 2001221647}
   - component: {fileID: 2001221646}
   - component: {fileID: 2001221648}
+  - component: {fileID: 2001221649}
   m_Layer: 5
   m_Name: Touch Controller
   m_TagString: TouchController
@@ -6678,6 +6715,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2001221649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001221644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 308df401b7d510a4aad7716b43218875, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2114895370
 GameObject:
   m_ObjectHideFlags: 0
