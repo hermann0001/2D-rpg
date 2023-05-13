@@ -92,8 +92,8 @@ public class DialogueSystem : MonoBehaviour
         foreach (char c in dialogueLines[index].ToCharArray())
         {
             textHolder.text += c;
-            if(sound != null)
-                SoundManager.Instance.PlaySound(sound);
+            if (sound != null)
+                AudioManager.instance.Play("TypingSound");
             yield return new WaitForSeconds(delay);
         }
     }

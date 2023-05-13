@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
@@ -41,5 +42,10 @@ public class AudioManager : MonoBehaviour
     {
         Sound s = sounds.Find(item => item.name == sound);
         s.source.Stop();   
+    }
+
+    public void Stop()
+    {
+        sounds.Find(item => item.source.isPlaying == true).source.Stop();
     }
 }

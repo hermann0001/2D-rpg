@@ -8,9 +8,6 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    [SerializeField] private Slider audioSlider;
-    [SerializeField] private Slider volumeSlider;
-
 
     private void Awake()
     {
@@ -25,17 +22,24 @@ public class GameManager : MonoBehaviour
     }
     public void StartGame()
     {
+        AudioManager.instance.Play("Click");
+        AudioManager.instance.Stop("MenuMusic");
         SceneManager.LoadScene("SpawnRoom");
+        AudioManager.instance.Play("SpawnRoomMusic");
     }
     public void Quit()
     {
+        AudioManager.instance.Play("Click");
         Application.Quit();
     }
 
     public void LoadMenu()
     {
+        AudioManager.instance.Stop();
+        AudioManager.instance.Play("Click");
         Time.timeScale = 1.0f;
         SceneManager.LoadScene("Menu");
+        AudioManager.instance.Play("MenuMusic");
     }
 
     public void PauseGame(GameObject pauseMenuScreen)
@@ -46,6 +50,7 @@ public class GameManager : MonoBehaviour
 
     public void ResumeGame(GameObject pauseMenuScreen)
     {
+        AudioManager.instance.Play("Click");
         Time.timeScale = 1f;
         pauseMenuScreen.SetActive(false);
     }
@@ -53,10 +58,12 @@ public class GameManager : MonoBehaviour
     public void GameOver(GameObject gameOverScreen)
     {
         gameOverScreen.SetActive(true);
+        AudioManager.instance.Stop("DormsMusic");
     }
 
     public void Retry(GameObject gameOverScreen)
     {
+        AudioManager.instance.Play("Click");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         gameOverScreen.SetActive(false);
     }

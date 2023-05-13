@@ -21,10 +21,7 @@ public class MenuManager : MonoBehaviour
     }
     public void NewGame()
     {
-        AudioManager.instance.Play("Click");
         GameManager.Instance.StartGame();
-        AudioManager.instance.Stop("MenuMusic");
-
     }
 
     public void Continue()

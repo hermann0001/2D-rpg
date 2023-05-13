@@ -452,65 +452,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 194288953}
   m_CullTransparentMesh: 1
---- !u!1 &255468244
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 255468246}
-  - component: {fileID: 255468245}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &255468245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 255468244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 473cc3363ab45f54995de0159fb7f908, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: MenuMusic
-    clip: {fileID: 8300000, guid: 62c4255fe65b8c34b94ef5cd73698cb2, type: 3}
-    mixer: {fileID: -757197304646187179, guid: f34050b1348783d4380491ea7d81b87b, type: 2}
-    volume: 1
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: Click
-    clip: {fileID: 8300000, guid: 3b92911209e5de3499ea18aef8ac0fdf, type: 3}
-    mixer: {fileID: -5131197257157760752, guid: f34050b1348783d4380491ea7d81b87b, type: 2}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
---- !u!4 &255468246
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 255468244}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 662.7169, y: 208.54854, z: 3.1310678}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &302548817
 GameObject:
   m_ObjectHideFlags: 0
@@ -1270,6 +1211,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744622232}
   m_CullTransparentMesh: 1
+--- !u!1001 &808066448
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5438182554599027090, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438182554599027100, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438182554599027100, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438182554599027100, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438182554599027100, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438182554599027100, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438182554599027100, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438182554599027100, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438182554599027100, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438182554599027100, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438182554599027100, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438182554599027100, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
 --- !u!1 &848068093
 GameObject:
   m_ObjectHideFlags: 0
@@ -2218,17 +2216,17 @@ MonoBehaviour:
   m_FillRect: {fileID: 1683799875}
   m_HandleRect: {fileID: 52252205}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 100
-  m_WholeNumbers: 1
+  m_MinValue: 0.0001
+  m_MaxValue: 1
+  m_WholeNumbers: 0
   m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2117284725}
-        m_TargetAssemblyTypeName: TextSlider, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 0
+      - m_Target: {fileID: 2117284726}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: SetSoundVolume
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3148,7 +3146,7 @@ Animator:
   m_GameObject: {fileID: 1579906940}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: db04f8cb3e549b74c8f1860e08aef0a7, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4826019978cc196468f302652fde7938, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3384,7 +3382,7 @@ Animator:
   m_GameObject: {fileID: 1656488645}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f08789100bfdbee4b8ad7f0b5be7b3f4, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4826019978cc196468f302652fde7938, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3902,7 +3900,7 @@ Animator:
   m_GameObject: {fileID: 1917821806}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 67babe57bfc08ae4b8f774957c003af0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4826019978cc196468f302652fde7938, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3956,10 +3954,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 302548817}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2117284726}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: Settings
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4239,10 +4237,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSlider: {fileID: 417369094}
-  soundSlider: {fileID: 0}
+  soundSlider: {fileID: 1226860696}
   myMixer: {fileID: 24100000, guid: f34050b1348783d4380491ea7d81b87b, type: 2}
   musicSliderText: {fileID: 194288955}
-  soundSliderText: {fileID: 0}
+  soundSliderText: {fileID: 323378054}
+  optionsPanel: {fileID: 302548817}
 --- !u!4 &2117284727
 Transform:
   m_ObjectHideFlags: 0
