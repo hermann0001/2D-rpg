@@ -50,7 +50,6 @@ public class GameManager : MonoBehaviour
 
     public void ResumeGame(GameObject pauseMenuScreen)
     {
-        AudioManager.instance.Play("Click");
         Time.timeScale = 1f;
         pauseMenuScreen.SetActive(false);
     }

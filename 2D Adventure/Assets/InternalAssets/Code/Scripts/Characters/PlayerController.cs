@@ -13,17 +13,12 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private ContactFilter2D movementFilter;
     [SerializeField] private Animator playerAnimator;
-    [SerializeField] private Animator controllerAnimator;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
     public VectorValue startingPosition;
     public PlayerInputActions playerControls;
     private InputAction move;
     public static InputAction interact;
 
-    private bool moveLeft;
-    private bool moveRight;
-    private bool moveUp;
-    private bool moveDown;
 
     private void OnEnable()
     {
@@ -49,14 +44,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         playerAnimator = GetComponent<Animator>();
-        controllerAnimator = GameObject.FindGameObjectWithTag("TouchController").GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-
-
-        moveLeft = false;
-        moveRight = false;
-        moveUp = false;
-        moveDown = false;
 
         transform.position = startingPosition.playerInitialValue;
     }
@@ -120,84 +108,6 @@ public class PlayerController : MonoBehaviour
     private void Interact(InputAction.CallbackContext context)
     {
         return;
-    }
-
-    
-
-    //private void MovementPlayer()
-    //{
-    //    if (moveLeft)
-    //    {
-    //        movementInput = new Vector2(-1, 0);
-    //    }
-    //    else if (moveRight)
-    //    {
-    //        movementInput = new Vector2(1, 0);
-    //    }
-    //    else if (moveUp)
-    //    {
-    //        movementInput = new Vector2(0, 1);
-    //    }
-    //    else if (moveDown)
-    //    {
-    //        movementInput = new Vector2(0, -1);
-    //    }
-    //    else
-    //    {
-    //        movementInput = Vector2.zero;
-    //    }
-    //}
-
-    //OnPointer<Down:Press; Up:Release><Direction>
-    public void OnPointerDownLeft()
-    {
-        moveLeft = true;
-        controllerAnimator.SetBool("left", moveLeft);
-    }
-
-    public void OnPointerUpLeft()
-    {
-        moveLeft = false;
-        controllerAnimator.SetBool("left", moveLeft);
-    }
-
-    public void OnPointerDownRight()
-    {
-        moveRight = true;
-        controllerAnimator.SetBool("right", moveRight);
-
-    }
-
-    public void OnPointerUpRight()
-    {
-        moveRight = false;
-        controllerAnimator.SetBool("right", moveRight);
-
-    }
-    public void OnPointerUpDown()
-    {
-        moveDown = false;
-        controllerAnimator.SetBool("down", moveDown);
-
-    }
-    public void OnPointerDownDown()
-    {
-        moveDown = true;
-        controllerAnimator.SetBool("down", moveDown);
-
-    }
-
-    public void OnPointerDownUp()
-    {
-        moveUp = true;
-        controllerAnimator.SetBool("up", moveUp);
-
-    }
-
-    public void OnPointerUpUp()
-    {
-        moveUp = false;
-        controllerAnimator.SetBool("up", moveUp);
     }
 }
 
