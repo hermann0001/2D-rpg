@@ -24,10 +24,6 @@ public class PlayerDialogues : MonoBehaviour, IInteractable
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
-    }
-
-    void Start()
-    {
         CreaExitBlock();
     }
 
@@ -86,6 +82,12 @@ public class PlayerDialogues : MonoBehaviour, IInteractable
             string[] lines = { "Forse dovrei controllare l'ordine del giorno prima... Dovrebbe stare nelle mail." };
             DialogueSystem.Instance.addNewDialogue(lines, dialogueSpriteIcon, dialogueTextColor, dialogueFont, typingSound);
             transform.position = new Vector3(1.928f, -1.968f, transform.position.z);
+        }
+
+        if (collision.CompareTag("Dialogo1"))
+        {
+            string[] lines = { "Che fame..." };
+            DialogueSystem.Instance.addNewDialogue(lines, dialogueSpriteIcon, dialogueTextColor, dialogueFont, typingSound);
         }
     }
 

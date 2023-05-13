@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class SceneTransition : MonoBehaviour
 {
-    public int sceneBuildIndex;
-    public Vector2 playerPosition;
+    [SerializeField] private int sceneBuildIndex;
+    [SerializeField] private Vector2 playerPosition;
     public VectorValue storage;
     public GameObject fadeInPanel;
     public GameObject fadeOutPanel;
@@ -41,7 +41,6 @@ public class SceneTransition : MonoBehaviour
             //storage.needText = needText;
             //storage.placeName = placeName;
             StartCoroutine(FadeCo());
-            //SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
         }
     }
 

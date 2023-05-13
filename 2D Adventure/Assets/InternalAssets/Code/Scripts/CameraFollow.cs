@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform target;
-    public float smoothing;
+    [SerializeField] private Transform target;
+    [SerializeField] private float smoothing;
+    [SerializeField] private Vector2 maxPos;
+    [SerializeField] private Vector2 minPos;
 
-    public Vector2 maxPos;
-    public Vector2 minPos;
 
+    private void Awake()
+    {
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+    }
     private void Start()
     {
         transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);

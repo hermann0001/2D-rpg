@@ -26,7 +26,6 @@ public class PC : MonoBehaviour, IInteractable
             DialogueSystem.Instance.addNewDialogue(dialogue, dialogueColor, dialogueFont);
             //GameObject.FindGameObjectWithTag("ExitBlock").GetComponent<BoxCollider2D>().enabled = false;
             Destroy(GameObject.FindGameObjectWithTag("ExitBlock"));
-
         }
         else
             Skip();

@@ -12,6 +12,7 @@ TagManager:
   - DialoguePanel
   - Controller
   - ExitBlock
+  - Dialogo1
   layers:
   - Default
   - TransparentFX
