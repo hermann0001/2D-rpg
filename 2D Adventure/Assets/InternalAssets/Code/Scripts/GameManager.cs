@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -66,22 +67,9 @@ public class GameManager : MonoBehaviour
         AudioManager.instance.Stop();
         AudioManager.instance.Play("Click");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        string activeSceneMusicName = getActiveSceneMusic();
-        Debug.Log(activeSceneMusicName);
+        string activeSceneMusicName = SceneManager.GetActiveScene().name;
+        activeSceneMusicName += "Music";
         AudioManager.instance.Play(activeSceneMusicName);
         gameOverScreen.SetActive(false);
-    }
-
-    private string getActiveSceneMusic()
-    { 
-        switch (SceneManager.GetActiveScene().name)
-        {
-            case "SpawnRoom":
-                return "SpawnRoomMusic";
-            case "Level0":
-                return "Level0Music";
-            default:
-                return null;
-        }
     }
 }
