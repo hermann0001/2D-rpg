@@ -8,7 +8,6 @@ public class SceneTransition : MonoBehaviour
 {
     [SerializeField] private string sceneName;
     [SerializeField] private Vector2 moveToPosition;
-    public GameObject player;
     public GameObject fadeInPanel;
     public GameObject fadeOutPanel;
     public float fadeWait;
@@ -38,7 +37,7 @@ public class SceneTransition : MonoBehaviour
         {
             AudioManager.instance.Stop();
             AudioManager.instance.Play("DoorOpenSound");
-            player.transform.position = moveToPosition;
+            GameManager.startingPos = new Vector2(moveToPosition.x, moveToPosition.y);
             //storage.lastMove = 
             //storage.needText = needText;
             //storage.placeName = placeName;

@@ -115,3 +115,10 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: ControlRoomMusic
+    clip: {fileID: 8300000, guid: 6b39d2a74ee70f34bb96e598227452f1, type: 3}
+    mixer: {fileID: -757197304646187179, guid: f34050b1348783d4380491ea7d81b87b, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}

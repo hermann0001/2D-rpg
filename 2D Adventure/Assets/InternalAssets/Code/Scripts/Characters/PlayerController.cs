@@ -2,19 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 1f;
     public float collisionOffset = 0.01f;
 
-    
     private Vector2 movementInput;
     private Rigidbody2D rb;
     private ContactFilter2D movementFilter;
     [SerializeField] private Animator playerAnimator;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
-    public VectorValue startingPosition;
     public PlayerInputActions playerControls;
     private InputAction move;
     public static InputAction interact;
@@ -45,8 +44,7 @@ public class PlayerController : MonoBehaviour
     {
         playerAnimator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-
-        transform.position = startingPosition.playerInitialValue;
+        transform.position = PlayerManager.Instance.GetStartingPosition();
     }
 
     void Update()

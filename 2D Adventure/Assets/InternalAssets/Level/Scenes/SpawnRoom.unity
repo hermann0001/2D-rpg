@@ -140,11 +140,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4734841949959362530, guid: afc774c9d4aed6440a18fcf6dfcf40c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.93
+      value: 0.81
       objectReference: {fileID: 0}
     - target: {fileID: 4734841949959362530, guid: afc774c9d4aed6440a18fcf6dfcf40c2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.42
+      value: -0.739
       objectReference: {fileID: 0}
     - target: {fileID: 4734841949959362530, guid: afc774c9d4aed6440a18fcf6dfcf40c2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -408,6 +408,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3757139630025538267, guid: a17cee927c7f6b249b172565d5615653, type: 3}
   m_PrefabInstance: {fileID: 465318086}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &465318088 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6106913550081970574, guid: a17cee927c7f6b249b172565d5615653, type: 3}
+  m_PrefabInstance: {fileID: 465318086}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &465318089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465318088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1a7445c2eed304eb75da2b6b2d0934, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &474766781 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4237156157785507969, guid: 4f4c19bfd5f307d4d860edfb6283fff7, type: 3}
@@ -1153,7 +1170,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: Dorms
   moveToPosition: {x: 1.883, y: -4.71}
-  player: {fileID: 237340221}
   fadeInPanel: {fileID: 1644339749109708450, guid: f6a006ce8ee0a8843a56c6342b37ea9b, type: 3}
   fadeOutPanel: {fileID: 582985912588461166, guid: 0c9850b91257d9748b82768496619cff, type: 3}
   fadeWait: 0.33

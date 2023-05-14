@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerDialogues : MonoBehaviour, IInteractable
 {
-    public static PlayerDialogues Instance { get; private set; }     
-    private bool first_dialogue_shown = false;
     private bool is_talking = false;
 
     [Header("Dialogue Settings")]
@@ -16,35 +14,21 @@ public class PlayerDialogues : MonoBehaviour, IInteractable
 
     private void Awake()
     {
-        if (Instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-        CreaExitBlock();
+        if(!PlayerManager.first_dialogue_shown)
+            CreaExitBlock();
     }
 
-    private static void CreaExitBlock()
+    private void Start()
     {
-        GameObject exit_block = new GameObject("ExitBlock", typeof(BoxCollider2D));
-        exit_block.transform.position = new Vector3(1.921f, -2.323864f, -9.937798f);
-        exit_block.tag = "ExitBlock";
-
-        BoxCollider2D boxCollider2D = exit_block.GetComponent<BoxCollider2D>();
-        boxCollider2D.size = new Vector2(1.301175f, 0.2906704f);
-        boxCollider2D.offset = new Vector2(-0.002182484f, -0.1233273f);
-        boxCollider2D.edgeRadius = 0.025f;
+        Debug.Log(PlayerManager.first_dialogue_shown.ToString());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!first_dialogue_shown)
+        if (!PlayerManager.first_dialogue_shown)
         {
-            first_dialogue_shown = true;
+            PlayerManager.first_dialogue_shown = true;
             StartCoroutine(CreateFirstDialogue());
         }
     }
@@ -71,7 +55,7 @@ public class PlayerDialogues : MonoBehaviour, IInteractable
 
     public bool isFirstDialogueShown()
     {
-        return first_dialogue_shown;
+        return PlayerManager.first_dialogue_shown;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -88,6 +72,18 @@ public class PlayerDialogues : MonoBehaviour, IInteractable
             string[] lines = { "Che fame..." };
             DialogueSystem.Instance.addNewDialogue(lines, dialogueSpriteIcon, dialogueTextColor, dialogueFont, typingSound);
         }
+    }
+
+    private static void CreaExitBlock()
+    {
+        GameObject exit_block = new GameObject("ExitBlock", typeof(BoxCollider2D));
+        exit_block.transform.position = new Vector3(1.921f, -2.323864f, -9.937798f);
+        exit_block.tag = "ExitBlock";
+
+        BoxCollider2D boxCollider2D = exit_block.GetComponent<BoxCollider2D>();
+        boxCollider2D.size = new Vector2(1.301175f, 0.2906704f);
+        boxCollider2D.offset = new Vector2(-0.002182484f, -0.1233273f);
+        boxCollider2D.edgeRadius = 0.025f;
     }
 
 }

@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager Instance;
+    public static bool first_dialogue_shown = false;
 
     [SerializeField] private GameObject player;
 
@@ -98,5 +99,10 @@ public class PlayerManager : MonoBehaviour
         myMixer.SetFloat("SoundVolume", Mathf.Log10(soundSlider.value) * 20);
         int valueToShow = (int)Mathf.Lerp(0, 100f, soundSlider.value);
         soundSliderText.text = valueToShow.ToString() + "%";
+    }
+
+    public Vector2 GetStartingPosition()
+    {
+        return GameManager.startingPos;
     }
 }

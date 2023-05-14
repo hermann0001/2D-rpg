@@ -1,5 +1,4 @@
-﻿using UnityEditor.Build.Content;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Tilemaps;
 
 namespace SuperTiled2Unity

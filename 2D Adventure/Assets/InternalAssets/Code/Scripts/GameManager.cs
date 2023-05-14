@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public static Vector2 startingPos;
+
     private void Awake()
     {
         if (Instance != null)
@@ -24,6 +26,7 @@ public class GameManager : MonoBehaviour
     }
     public void StartGame()
     {
+        startingPos = new Vector2(0.81f, -0.739f);
         AudioManager.instance.Play("Click");
         AudioManager.instance.Stop("MenuMusic");
         SceneManager.LoadScene("SpawnRoom");

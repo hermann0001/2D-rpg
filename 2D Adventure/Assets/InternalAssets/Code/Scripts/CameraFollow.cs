@@ -10,12 +10,10 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] private Vector2 minPos;
 
 
-    private void Awake()
-    {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
-    }
     private void Start()
     {
+        Debug.Log(GameObject.FindGameObjectWithTag("Player").transform.ToString());
+        target = GameObject.FindGameObjectWithTag("Player").transform;
         transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
     }
 
