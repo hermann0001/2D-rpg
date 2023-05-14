@@ -81,8 +81,8 @@ public class PlayerManager : MonoBehaviour
 
     public void ReturnTitle()
     {
-        gameOverPanel.SetActive(false);
         GameManager.Instance.LoadMenu();
+        gameOverPanel.SetActive(false);
         Destroy(gameObject);
     }
 

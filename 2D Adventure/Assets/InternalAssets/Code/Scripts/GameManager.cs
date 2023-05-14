@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -71,5 +72,11 @@ public class GameManager : MonoBehaviour
         activeSceneMusicName += "Music";
         AudioManager.instance.Play(activeSceneMusicName);
         gameOverScreen.SetActive(false);
+    }
+
+    public void Load(string sceneName)
+    {
+        AudioManager.instance.Play("DoorCloseSound");
+        AudioManager.instance.Play(sceneName + "Music");
     }
 }

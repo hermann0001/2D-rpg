@@ -83,6 +83,7 @@ public class DialogueSystem : MonoBehaviour
         //textName.text = npcName;
         dialoguePanel.SetActive(true);
         controller.SetActive(false);
+        AudioManager.instance.Stop("FootstepSound");
         StartCoroutine(TypeLine());
     }
 

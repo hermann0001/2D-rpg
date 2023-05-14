@@ -52,14 +52,13 @@ public class PlayerDialogues : MonoBehaviour, IInteractable
     public IEnumerator CreateFirstDialogue()
     {
         is_talking = true;
-        yield return new WaitForSecondsRealtime(3f);
+        yield return new WaitForSecondsRealtime(2.5f);
         string[] lines = { "Dovrei controllare l'ordine del giorno..." };
         DialogueSystem.Instance.addNewDialogue(lines, dialogueSpriteIcon, dialogueTextColor, dialogueFont, typingSound);
     }
 
     public void Interact()
     {
-        Debug.Log("interacted!");
         if (is_talking)
             Skip();
     }

@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class SceneTransition : MonoBehaviour
 {
-    [SerializeField] private int sceneBuildIndex;
-    [SerializeField] private Vector2 playerPosition;
-    public VectorValue storage;
+    [SerializeField] private string sceneName;
+    [SerializeField] private Vector2 moveToPosition;
+    public GameObject player;
     public GameObject fadeInPanel;
     public GameObject fadeOutPanel;
     public float fadeWait;
@@ -36,7 +36,9 @@ public class SceneTransition : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            storage.playerInitialValue = playerPosition;
+            AudioManager.instance.Stop();
+            AudioManager.instance.Play("DoorOpenSound");
+            player.transform.position = moveToPosition;
             //storage.lastMove = 
             //storage.needText = needText;
             //storage.placeName = placeName;
@@ -51,7 +53,8 @@ public class SceneTransition : MonoBehaviour
             Instantiate(fadeOutPanel, Vector3.zero, Quaternion.identity);
         }
         yield return new WaitForSeconds(fadeWait);
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneBuildIndex, LoadSceneMode.Single);
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+
         while (!asyncOperation.isDone)
         {
             yield return null;
