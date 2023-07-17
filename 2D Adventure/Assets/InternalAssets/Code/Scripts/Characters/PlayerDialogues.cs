@@ -18,10 +18,6 @@ public class PlayerDialogues : MonoBehaviour, IInteractable
             CreaExitBlock();
     }
 
-    private void Start()
-    {
-        Debug.Log(PlayerManager.first_dialogue_shown.ToString());
-    }
 
     // Update is called once per frame
     void Update()
