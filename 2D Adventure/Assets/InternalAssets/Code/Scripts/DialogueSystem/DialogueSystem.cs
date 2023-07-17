@@ -27,8 +27,8 @@ public class DialogueSystem : MonoBehaviour
         index = 0;
         dialoguePanel = GameObject.FindGameObjectWithTag("DialoguePanel");
         dialoguePanel.SetActive(false);
-        textHolder = dialoguePanel.transform.Find("Text").GetComponent<Text>(); //dialoguePanel.transform.FindChild("Text").GetComponent<Text>();
-        imageHolder = dialoguePanel.transform.Find("NpcImage").GetComponent<Image>(); //dialoguePanel.transform.FindChild("Image").GetComponent<Text
+        textHolder = dialoguePanel.transform.Find("Text").GetComponent<Text>();              //dialoguePanel.transform.FindChild("Text").GetComponent<Text>();
+        imageHolder = dialoguePanel.transform.Find("NpcImage").GetComponent<Image>();        //dialoguePanel.transform.FindChild("Image").GetComponent<Text
         skipButton = dialoguePanel.transform.Find("Skip").GetComponent<Button>();
         skipButton.onClick.AddListener(delegate { CompleteOrSkip(); });
         controller = GameObject.FindGameObjectWithTag("TouchController");

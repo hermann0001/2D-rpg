@@ -14,28 +14,24 @@ public class PlayerDialogues : MonoBehaviour, IInteractable
 
     private void Awake()
     {
-        if(!PlayerManager.first_dialogue_shown)
+        if(!PlayerManager.first_spawnroom_dialogue_shown)
             CreaExitBlock();
     }
 
-    private void Start()
-    {
-        Debug.Log(PlayerManager.first_dialogue_shown.ToString());
-    }
 
     // Update is called once per frame
     void Update()
     {
-        if (!PlayerManager.first_dialogue_shown)
+        is_talking = DialogueSystem.Instance.isPanelActive();
+        if (!PlayerManager.first_spawnroom_dialogue_shown)
         {
-            PlayerManager.first_dialogue_shown = true;
+            PlayerManager.first_spawnroom_dialogue_shown = true;
             StartCoroutine(CreateFirstDialogue());
         }
     }
 
     public IEnumerator CreateFirstDialogue()
     {
-        is_talking = true;
         yield return new WaitForSecondsRealtime(2.5f);
         string[] lines = { "Dovrei controllare l'ordine del giorno..." };
         DialogueSystem.Instance.addNewDialogue(lines, dialogueSpriteIcon, dialogueTextColor, dialogueFont, typingSound);
@@ -51,11 +47,8 @@ public class PlayerDialogues : MonoBehaviour, IInteractable
     {
         return DialogueSystem.Instance.isPanelActive();
     }
-    private void Skip() { DialogueSystem.Instance.skipButton.onClick.Invoke(); }
-
-    public bool isFirstDialogueShown()
-    {
-        return PlayerManager.first_dialogue_shown;
+    private void Skip() {
+        DialogueSystem.Instance.skipButton.onClick.Invoke(); 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -65,12 +58,6 @@ public class PlayerDialogues : MonoBehaviour, IInteractable
             string[] lines = { "Forse dovrei controllare l'ordine del giorno prima... Dovrebbe stare nelle mail." };
             DialogueSystem.Instance.addNewDialogue(lines, dialogueSpriteIcon, dialogueTextColor, dialogueFont, typingSound);
             transform.position = new Vector3(1.928f, -1.968f, transform.position.z);
-        }
-
-        if (collision.CompareTag("Dialogo1"))
-        {
-            string[] lines = { "Che fame..." };
-            DialogueSystem.Instance.addNewDialogue(lines, dialogueSpriteIcon, dialogueTextColor, dialogueFont, typingSound);
         }
     }
 
@@ -86,4 +73,25 @@ public class PlayerDialogues : MonoBehaviour, IInteractable
         boxCollider2D.edgeRadius = 0.025f;
     }
 
+    public void CreaPrimoDialogoDormitorio()
+    {
+        if (!PlayerManager.first_dorm_dialogue_shown)
+        {
+            string[] lines = { "Che fame..." };
+            DialogueSystem.Instance.addNewDialogue(lines, dialogueSpriteIcon, dialogueTextColor, dialogueFont, typingSound);
+            PlayerManager.first_dorm_dialogue_shown = true;
+        }
+    }
+
+    public void VaiAlBagnoPrimaDiPassare()
+    {
+        transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
+
+        if (!PlayerManager.bathroom_visited && !is_talking)
+        {
+            string[] lines = { "Forse dovrei prima darmi una rinfrescata al bagno..." };
+            DialogueSystem.Instance.addNewDialogue(lines, dialogueSpriteIcon, dialogueTextColor, dialogueFont, typingSound);
+            //TODO: da controllare se viene aggiunto alla lista di interactable!!
+        }
+    }
 }
