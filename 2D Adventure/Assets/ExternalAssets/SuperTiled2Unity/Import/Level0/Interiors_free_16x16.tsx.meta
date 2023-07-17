@@ -8,9 +8,9 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: cc34d0f3dc257a442819830b408c5322, type: 3}
-  missingFiles: []
+  missingFiles:
+  - ../../../../gameAssets/TILEPACKS/Modern_Interiors_v41.3.3/1_Interiors/16x16/Interiors_16x16.png
   errors:
-  - Could not generate asset path for '../../../../gameAssets/TILEPACKS/Modern_Interiors_v41.3.3/1_Interiors/16x16/Interiors_16x16.png'
   - 'Missing texture asset: ../../../../gameAssets/TILEPACKS/Modern_Interiors_v41.3.3/1_Interiors/16x16/Interiors_16x16.png'
   warnings: []
   missingSortingLayers: []

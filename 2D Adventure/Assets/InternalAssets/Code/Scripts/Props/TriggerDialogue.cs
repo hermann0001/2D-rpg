@@ -12,8 +12,6 @@ public class TriggerDialogue : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(tagFilter) && !collision.gameObject.CompareTag(tagFilter)) return;
         onTriggerEnter.Invoke();
-
-
     }
 
     private void OnTriggerExit2D(Collider2D collision)

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerDialogues : MonoBehaviour, IInteractable
 {
@@ -14,7 +15,7 @@ public class PlayerDialogues : MonoBehaviour, IInteractable
 
     private void Awake()
     {
-        if(!PlayerManager.first_spawnroom_dialogue_shown)
+        if(!PlayerManager.first_spawnroom_dialogue_shown && SceneManager.GetActiveScene().name.Equals("SpawnRoom"))
             CreaExitBlock();
     }
 
@@ -85,7 +86,7 @@ public class PlayerDialogues : MonoBehaviour, IInteractable
 
     public void VaiAlBagnoPrimaDiPassare()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
+        //transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
 
         if (!PlayerManager.bathroom_visited && !is_talking)
         {

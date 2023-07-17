@@ -16,10 +16,16 @@ public class InteractionDetector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        foreach (IInteractable i in interactable_in_range)
+            Debug.Log(i.ToString());
+        Debug.Log(interactable_in_range.Count);
+
         if (PlayerController.interact.WasPressedThisFrame() && interactable_in_range.Count > 0)
         {
             var interactable = interactable_in_range[0];
+            Debug.Log(interactable.ToString());
             interactable.Interact();
+
             if (!interactable.CanInteract())
                 interactable_in_range.Remove(interactable);
         }
