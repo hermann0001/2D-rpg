@@ -4,4 +4,4 @@ Develop and Game Design: Hermann Tamilia, Luca Peperoni
 
 External help:
 Elisa Pinelli (Storywriting)
-David Colombo (Artworks)
+
