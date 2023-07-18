@@ -24,7 +24,7 @@ public class PlayerDialogues : MonoBehaviour, IInteractable
     void Update()
     {
         is_talking = DialogueSystem.Instance.isPanelActive();
-        if (!PlayerManager.first_spawnroom_dialogue_shown)
+        if (!PlayerManager.first_spawnroom_dialogue_shown && SceneManager.GetActiveScene().name.Equals("SpawnRoom"))
         {
             PlayerManager.first_spawnroom_dialogue_shown = true;
             StartCoroutine(CreateFirstDialogue());
@@ -91,6 +91,15 @@ public class PlayerDialogues : MonoBehaviour, IInteractable
         if (!PlayerManager.bathroom_visited && !is_talking)
         {
             string[] lines = { "Forse dovrei prima darmi una rinfrescata al bagno..." };
+            DialogueSystem.Instance.addNewDialogue(lines, dialogueSpriteIcon, dialogueTextColor, dialogueFont, typingSound);
+        }
+    }
+
+    public void TiStaiSpecchiando()
+    {
+        if (!is_talking)
+        {
+            string[] lines = { "Sono io, Anastasia" };
             DialogueSystem.Instance.addNewDialogue(lines, dialogueSpriteIcon, dialogueTextColor, dialogueFont, typingSound);
         }
     }
