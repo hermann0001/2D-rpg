@@ -86,13 +86,12 @@ public class PlayerDialogues : MonoBehaviour, IInteractable
 
     public void VaiAlBagnoPrimaDiPassare()
     {
-        //transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
+        transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
 
         if (!PlayerManager.bathroom_visited && !is_talking)
         {
             string[] lines = { "Forse dovrei prima darmi una rinfrescata al bagno..." };
             DialogueSystem.Instance.addNewDialogue(lines, dialogueSpriteIcon, dialogueTextColor, dialogueFont, typingSound);
-            //TODO: da controllare se viene aggiunto alla lista di interactable!!
         }
     }
 }

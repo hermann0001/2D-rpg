@@ -10,20 +10,16 @@ public class InteractionDetector : MonoBehaviour
 
     private void Start()
     {
-        interactable_in_range.Add(transform.GetComponentInParent<IInteractable>());
     }
 
     // Update is called once per frame
     void Update()
     {
-        foreach (IInteractable i in interactable_in_range)
-            Debug.Log(i.ToString());
-        Debug.Log(interactable_in_range.Count);
+        checkForDialogueInteractions();
 
         if (PlayerController.interact.WasPressedThisFrame() && interactable_in_range.Count > 0)
         {
             var interactable = interactable_in_range[0];
-            Debug.Log(interactable.ToString());
             interactable.Interact();
 
             if (!interactable.CanInteract())
@@ -31,11 +27,20 @@ public class InteractionDetector : MonoBehaviour
         }
     }
 
+    private void checkForDialogueInteractions()
+    {
+        var interactable = transform.GetComponentInParent<IInteractable>();
+
+        if (DialogueSystem.Instance.isPanelActive() && !interactable_in_range.Contains(interactable) && interactable.GetType().Equals(typeof(PlayerDialogues)))
+            interactable_in_range.Add(interactable);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var interactable = collision.GetComponent<IInteractable>();
-        if (interactable != null && interactable.CanInteract())
+        if (interactable != null && interactable.CanInteract() && !collision.CompareTag("SceneTransition"))
             interactable_in_range.Add(interactable);
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)

@@ -14,6 +14,7 @@ TagManager:
   - ExitBlock
   - Dialogo1
   - AudioManager
+  - SceneTransition
   layers:
   - Default
   - TransparentFX

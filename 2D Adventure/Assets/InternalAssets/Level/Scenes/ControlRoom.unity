@@ -3924,7 +3924,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: Dorms
   moveToPosition: {x: 3.987, y: -12.681}
-  player: {fileID: 790407999}
   fadeInPanel: {fileID: 1644339749109708450, guid: f6a006ce8ee0a8843a56c6342b37ea9b, type: 3}
   fadeOutPanel: {fileID: 582985912588461166, guid: 0c9850b91257d9748b82768496619cff, type: 3}
   fadeWait: 0.33
