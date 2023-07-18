@@ -99,7 +99,7 @@ public class PlayerDialogues : MonoBehaviour, IInteractable
     {
         if (!is_talking)
         {
-            string[] lines = { "Sono io, Anastasia" };
+            string[] lines = { "Sono io, Anastasia." };
             DialogueSystem.Instance.addNewDialogue(lines, dialogueSpriteIcon, dialogueTextColor, dialogueFont, typingSound);
         }
     }

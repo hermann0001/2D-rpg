@@ -196,6 +196,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2097805576}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: HandWashingSound
+          m_BoolArgument: 0
+        m_CallState: 2
   onTriggerExit:
     m_PersistentCalls:
       m_Calls: []
@@ -212,7 +224,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.047771454, y: -0.24522805}
+  m_Offset: {x: -0.047771454, y: -0.16373277}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -223,7 +235,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.63056564, y: 0.2993493}
+  m_Size: {x: 0.63056564, y: 0.13635874}
   m_EdgeRadius: 0
 --- !u!1001 &327499083
 PrefabInstance:
@@ -608,6 +620,108 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 608e1a94ec74e1f4abf0404428ef5980, type: 3}
+--- !u!1 &678193179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 678193180}
+  - component: {fileID: 678193182}
+  - component: {fileID: 678193181}
+  m_Layer: 0
+  m_Name: FoodTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &678193180
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678193179}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.42, y: -10.958, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 914186392}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &678193181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678193179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b87c0e7c6bd96af4fadcd8a5a89f6051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagFilter: 
+  onTriggerEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8760177836839402867}
+        m_TargetAssemblyTypeName: HealthManager, Assembly-CSharp
+        m_MethodName: Gain1Hp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2097805576}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: CrunchingSound
+          m_BoolArgument: 0
+        m_CallState: 2
+  onTriggerExit:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!61 &678193182
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678193179}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.05462694, y: -0.1946168}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.27751064, y: 0.1981268}
+  m_EdgeRadius: 0
 --- !u!1 &684524744
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,6 +1336,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbdb9eb3e3847494ca705ede08c3c186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2097805576 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5438182554599027101, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+  m_PrefabInstance: {fileID: 5438182553804343941}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473cc3363ab45f54995de0159fb7f908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2114895370
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,6 +1614,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5438182554599027101, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+      propertyPath: sounds.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438182554599027101, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+      propertyPath: sounds.Array.data[11].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a69a37b4b9717ff41974426aef11907d, type: 3}
+    - target: {fileID: 5438182554599027101, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+      propertyPath: sounds.Array.data[11].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438182554599027101, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+      propertyPath: sounds.Array.data[11].name
+      value: HandWashingSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438182554599027101, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+      propertyPath: sounds.Array.data[12].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 889648fae4283844db2ed4799c2a56e6, type: 3}
+    - target: {fileID: 5438182554599027101, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+      propertyPath: sounds.Array.data[12].name
+      value: CrunchingSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438182554599027101, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+      propertyPath: sounds.Array.data[11].mixer
+      value: 
+      objectReference: {fileID: -5131197257157760752, guid: f34050b1348783d4380491ea7d81b87b, type: 2}
+    - target: {fileID: 5438182554599027101, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+      propertyPath: sounds.Array.data[11].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438182554599027101, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+      propertyPath: sounds.Array.data[12].mixer
+      value: 
+      objectReference: {fileID: -5131197257157760752, guid: f34050b1348783d4380491ea7d81b87b, type: 2}
+    - target: {fileID: 5438182554599027101, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+      propertyPath: sounds.Array.data[12].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438182554599027101, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+      propertyPath: sounds.Array.data[11].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438182554599027101, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
+      propertyPath: sounds.Array.data[12].volume
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eba94b0bb46989149b30143a41fe9bf5, type: 3}
 --- !u!114 &6050394368561295307
@@ -1574,6 +1747,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8760177835672260192, guid: 152d437a58e53cf4cb4fd3def01dbeec, type: 3}
+      propertyPath: startingHealth
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8760177835672260193, guid: 152d437a58e53cf4cb4fd3def01dbeec, type: 3}
       propertyPath: m_RootOrder
       value: 4

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
-    [SerializeField] private float startingHealth = 3f;
+    [SerializeField] private float startingHealth;
     public float currentHealth { get; private set; }
 
 
@@ -28,10 +28,16 @@ public class HealthManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Gain1Hp()
+    {
+        if (currentHealth < 3 && currentHealth > 0)
+            currentHealth++;
+    }
+
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
-            TakeDamage();      
+            Gain1Hp();
     }
+
 }
