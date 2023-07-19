@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using PlayFab;
 using PlayFab.ClientModels;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayFabControls : MonoBehaviour
 {
@@ -81,6 +82,7 @@ public class PlayFabControls : MonoBehaviour
     {
         errorSignUp.text = "";
         errorLogIn.text = "";
+        HUD.SetActive(true);
         StartGame();
     }
 
@@ -94,5 +96,10 @@ public class PlayFabControls : MonoBehaviour
     {
         startPanel.SetActive(false);
         HUD.SetActive(true);
+    }
+
+    public void StartScene()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }
