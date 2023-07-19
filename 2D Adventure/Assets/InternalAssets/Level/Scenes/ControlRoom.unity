@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3708984, g: 0.37837017, b: 0.35722524, a: 1}
+  m_IndirectSpecularColor: {r: 0.3708985, g: 0.3783704, b: 0.35722548, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3744,6 +3744,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ReturnTitle
       objectReference: {fileID: 0}
+    - target: {fileID: 4237156156343797267, guid: 4f4c19bfd5f307d4d860edfb6283fff7, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1225668047}
+    - target: {fileID: 4237156156343797267, guid: 4f4c19bfd5f307d4d860edfb6283fff7, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSoundVolume
+      objectReference: {fileID: 0}
     - target: {fileID: 4237156156518622376, guid: 4f4c19bfd5f307d4d860edfb6283fff7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3751,6 +3759,18 @@ PrefabInstance:
     - target: {fileID: 4237156156518622376, guid: 4f4c19bfd5f307d4d860edfb6283fff7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Pause
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237156156629627919, guid: 4f4c19bfd5f307d4d860edfb6283fff7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237156156709790197, guid: 4f4c19bfd5f307d4d860edfb6283fff7, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1225668047}
+    - target: {fileID: 4237156156709790197, guid: 4f4c19bfd5f307d4d860edfb6283fff7, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetMusicVolume
       objectReference: {fileID: 0}
     - target: {fileID: 4237156156989247486, guid: 4f4c19bfd5f307d4d860edfb6283fff7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3772,6 +3792,14 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 1225668048}
+    - target: {fileID: 4237156157720946863, guid: 4f4c19bfd5f307d4d860edfb6283fff7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1225668047}
+    - target: {fileID: 4237156157720946863, guid: 4f4c19bfd5f307d4d860edfb6283fff7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
     - target: {fileID: 4237156157820639060, guid: 4f4c19bfd5f307d4d860edfb6283fff7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
