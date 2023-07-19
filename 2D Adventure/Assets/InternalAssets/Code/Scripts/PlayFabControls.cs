@@ -6,11 +6,12 @@ using PlayFab;
 using PlayFab.ClientModels;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class PlayFabControls : MonoBehaviour
 {
-    [SerializeField] GameObject signUpTab, logInTab, startPanel, HUD;
-    public TextMeshProUGUI username, userEmail, userPassword, userEmailLogIn, userPasswordLogIn, errorSignUp, errorLogIn;
+    [SerializeField] GameObject signUpTab, logInTab, backupTab,startPanel, HUD;
+    public TextMeshProUGUI username, userEmail, userPassword, userEmailLogIn, userPasswordLogIn, errorSignUp, errorLogIn, emailBackup;
     string encryptedPassword;
 
 
@@ -36,6 +37,14 @@ public class PlayFabControls : MonoBehaviour
         errorLogIn.text = "";
     }
 
+    public void SwitchToBackupTab()
+    {
+        signUpTab.SetActive(false);
+        logInTab.SetActive(false);
+        backupTab.SetActive(true);
+    }
+
+
     string Encrypt(string pass)
     {
         System.Security.Cryptography.MD5CryptoServiceProvider x = new System.Security.Cryptography.MD5CryptoServiceProvider();
@@ -55,6 +64,7 @@ public class PlayFabControls : MonoBehaviour
         var usernameNoWhiteSpace = username.text.Remove(username.text.Length - 1);
         var registerRequest = new RegisterPlayFabUserRequest{Email = userEmail.text, Password = Encrypt(userPassword.text), Username = usernameNoWhiteSpace};
         PlayFabClientAPI.RegisterPlayFabUser(registerRequest, RegisterSuccess, RegisterError);
+        
     }
 
     public void RegisterSuccess(RegisterPlayFabUserResult result)
@@ -102,4 +112,24 @@ public class PlayFabControls : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+
+     public void RecoverPassword()
+     {
+         var request = new SendAccountRecoveryEmailRequest
+         {
+             Email = emailBackup.text,
+             TitleId = "9D448",
+         };
+         PlayFabClientAPI.SendAccountRecoveryEmail(request, ResultCallback, ErrorCallback);
+     }
+     private void ErrorCallback(PlayFabError error)
+     {
+         Debug.LogError(error.ErrorMessage);
+     }
+
+     private void ResultCallback(SendAccountRecoveryEmailResult result)
+     {
+         Debug.Log("Please check your email");
+     }
+   
 }
