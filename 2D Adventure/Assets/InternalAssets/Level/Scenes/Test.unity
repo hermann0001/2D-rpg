@@ -2696,6 +2696,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 1822851282}
   skipButton: {fileID: 0}
+  textHolder: {fileID: 0}
+  textName: {fileID: 0}
+  dialogueLines: []
+  sound: {fileID: 0}
+  delay: 0
+  imageHolder: {fileID: 0}
 --- !u!4 &1100466316
 Transform:
   m_ObjectHideFlags: 0
@@ -3560,7 +3566,6 @@ MonoBehaviour:
   - ciao sono pippo
   textColor: {r: 0, g: 0, b: 0, a: 0}
   textFont: {fileID: 12800000, guid: 87b40be68dab14e42bf6fe5ea6608794, type: 3}
-  npcName: PIPPO
   sound: {fileID: 0}
   characterSprite: {fileID: 0}
 --- !u!61 &1411775848
@@ -3713,7 +3718,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 3
-  playerManager: {fileID: 0}
 --- !u!114 &1426109823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3728,23 +3732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   collisionOffset: 0.012
-  movementFilter:
-    useTriggers: 0
-    useLayerMask: 0
-    useDepth: 0
-    useOutsideDepth: 0
-    useNormalAngle: 0
-    useOutsideNormalAngle: 0
-    layerMask:
-      serializedVersion: 2
-      m_Bits: 0
-    minDepth: 0
-    maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
   playerAnimator: {fileID: 0}
-  controllerAnimator: {fileID: 0}
-  startingPosition: {fileID: 11400000, guid: 2208439fa0d1d6e47b0b0f80eced9208, type: 2}
 --- !u!114 &1426109824
 MonoBehaviour:
   m_ObjectHideFlags: 0

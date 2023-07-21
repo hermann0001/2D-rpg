@@ -11,6 +11,7 @@ public class PC : MonoBehaviour, IInteractable
     [SerializeField] private string[] dialogue;
     [SerializeField] private Color dialogueColor;
     [SerializeField] private Font dialogueFont;
+    [SerializeField] private GameObject light;
 
     bool IInteractable.CanInteract()
     {
@@ -27,6 +28,7 @@ public class PC : MonoBehaviour, IInteractable
             DialogueSystem.Instance.addNewDialogue(dialogue, dialogueColor, dialogueFont);
             //GameObject.FindGameObjectWithTag("ExitBlock").GetComponent<BoxCollider2D>().enabled = false;
             Destroy(GameObject.FindGameObjectWithTag("ExitBlock"));
+            light.SetActive(true);
         }
         else
             Skip();
@@ -46,6 +48,7 @@ public class PC : MonoBehaviour, IInteractable
             DialogueSystem.Instance.dialoguePanel.SetActive(false);
             //SoundManager.Instance.StopSound();
             DialogueSystem.Instance.StopAllCoroutines();
+            light.SetActive(false);
         }
     }
 
