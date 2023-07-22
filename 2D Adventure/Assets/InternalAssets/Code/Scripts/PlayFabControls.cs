@@ -96,10 +96,38 @@ public class PlayFabControls : MonoBehaviour
         StartGame();
     }
 
+    /*
     public void LogInSuccess(PlayFabError error)
     {
         //errorLogIn.text = error.GenerateErrorReport();
         errorLogIn.gameObject.SetActive(true);
+    }
+    */
+    private void LogInSuccess(PlayFabError error)
+    {
+        StartCoroutine(ShowErrorAndHide(error));
+    }
+
+
+
+    private IEnumerator ShowErrorAndHide(PlayFabError error)
+    {
+        float duration = 3f;
+
+
+
+        // Attiva il Canvas
+        errorLogIn.gameObject.SetActive(true);
+
+
+
+        // Attendere per la durata specificata
+        yield return new WaitForSeconds(duration);
+
+
+
+        // Disattiva il Canvas dopo il ritardo
+        errorLogIn.gameObject.SetActive(false);
     }
 
     void StartGame()
