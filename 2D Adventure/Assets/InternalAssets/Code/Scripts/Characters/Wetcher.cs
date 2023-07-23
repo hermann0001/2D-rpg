@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -61,14 +62,17 @@ public class Wetcher : MonoBehaviour, IInteractable
     private void Skip() { DialogueSystem.Instance.skipButton.onClick.Invoke(); }
 
     public void Disappear()
-    { 
-        wetcherTrigger.SetActive(false);
-        gameObject.SetActive(false);
+    {
+        StartCoroutine(IEDisappear());
     }
 
-    public void StopAudio()
+    private IEnumerator IEDisappear()
     {
-        AudioManager.instance.Stop();
+        AudioManager.instance.Stop("WetcherMusic");
         AudioManager.instance.Play("DormsMusic");
+        yield return new WaitForSeconds(2f);
+        player.transform.position = new Vector3(player.transform.position.x - 0.5f, player.transform.position.y, player.transform.position.z);
+        wetcherTrigger.SetActive(false);
+        gameObject.SetActive(false);
     }
 }
