@@ -1537,7 +1537,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ADVENTURE
+  m_text: ABYSSAL VOID
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbc10835fe25822489d361b8cdd95da4, type: 2}
   m_sharedMaterial: {fileID: -5223845259698246887, guid: bbc10835fe25822489d361b8cdd95da4, type: 2}
@@ -2082,7 +2082,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47.45
+  m_fontSize: 56.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2219,7 +2219,7 @@ MonoBehaviour:
   m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

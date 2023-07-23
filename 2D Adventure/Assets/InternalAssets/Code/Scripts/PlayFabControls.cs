@@ -159,5 +159,13 @@ public class PlayFabControls : MonoBehaviour
      {
          Debug.Log("Please check your email");
      }
-   
+
+    public void SwitchToLogInTab2()
+    {
+        backupTab.SetActive(false);
+        logInTab.SetActive(true);
+        errorSignUp.text = "";
+        errorLogIn.text = "";
+    }
+
 }
