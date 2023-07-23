@@ -103,4 +103,12 @@ public class PlayerDialogues : MonoBehaviour, IInteractable
             DialogueSystem.Instance.addNewDialogue(lines, dialogueSpriteIcon, dialogueTextColor, dialogueFont, typingSound);
         }
     }
+    public void GeneratoreDiRiserva()
+    {
+        if (!is_talking)
+        {
+            string[] lines = { "È la terza volta in questo mese", "dovrebbero rivedere il sistema di alimentazione...", "ricordo un generatore di riserva nei paraggi." };
+            DialogueSystem.Instance.addNewDialogue(lines, dialogueSpriteIcon, dialogueTextColor, dialogueFont, typingSound);
+        }
+    }
 }

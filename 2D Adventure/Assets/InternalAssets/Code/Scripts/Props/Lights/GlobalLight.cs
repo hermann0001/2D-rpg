@@ -11,6 +11,7 @@ public class GlobalLight : MonoBehaviour
     [SerializeField] GameObject ambientLight;
     [SerializeField] Color noLightColor;
     [SerializeField] Color lightsOnColor;
+    [SerializeField] PlayerDialogues p_dialogues;
 
     public void FlickerAndTurnOff()
     {
@@ -39,6 +40,7 @@ public class GlobalLight : MonoBehaviour
         yield return new WaitForSeconds(UnityEngine.Random.Range(1f, 1.8f));
         lightsOff();
         bathroomLight.GetComponent<BathroomLight>().StartFlicker();
+        p_dialogues.GeneratoreDiRiserva();
     }
 
     private void lightsOn()
