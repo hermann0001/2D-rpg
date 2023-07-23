@@ -171,3 +171,10 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: WetcherJumpscareSound
+    clip: {fileID: 8300000, guid: 3d41df31ff061a94c8e7488a20946562, type: 3}
+    mixer: {fileID: -5131197257157760752, guid: f34050b1348783d4380491ea7d81b87b, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

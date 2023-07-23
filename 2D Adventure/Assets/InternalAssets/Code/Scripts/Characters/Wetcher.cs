@@ -13,6 +13,7 @@ public class Wetcher : MonoBehaviour, IInteractable
     [SerializeField] private string sound;
     [SerializeField] private Sprite characterSprite;
     [SerializeField] private GameObject player;
+    [SerializeField] private HealthManager healthManager;
 
     [SerializeField] private EventScriptableObject eventScriptableObject;
 
@@ -22,6 +23,7 @@ public class Wetcher : MonoBehaviour, IInteractable
     void Start()
     {
         wetcherTrigger.SetActive(true);
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     public void LookLeft()
@@ -42,6 +44,7 @@ public class Wetcher : MonoBehaviour, IInteractable
         AudioManager.instance.Play("WetcherMusic");
         DialogueSystem.Instance.addNewDialogue(lines, characterSprite, textColor, textFont, sound);
         is_interacted = true;
+        eventScriptableObject.talked_to_wetcher = true;
     }
 
     public void Interact()
@@ -74,5 +77,19 @@ public class Wetcher : MonoBehaviour, IInteractable
         player.transform.position = new Vector3(player.transform.position.x - 0.5f, player.transform.position.y, player.transform.position.z);
         wetcherTrigger.SetActive(false);
         gameObject.SetActive(false);
+    }
+
+    public void reachPlayerAndKill()
+    {
+        LookLeft();
+        transform.position = new Vector3(player.transform.position.x + 0.25f, player.transform.position.y, player.transform.position.z);
+        AudioManager.instance.Play("WetcherJumpscareSound");
+        StartCoroutine(waiter());
+    }
+
+    private IEnumerator waiter()
+    {
+        yield return new WaitForSeconds(2f);
+        PlayerManager.Instance.GameOver();
     }
 }
