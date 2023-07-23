@@ -12,6 +12,19 @@ public class GlobalLight : MonoBehaviour
     [SerializeField] Color noLightColor;
     [SerializeField] Color lightsOnColor;
     [SerializeField] PlayerDialogues p_dialogues;
+    [SerializeField] EventScriptableObject eventScriptableObject;
+
+    private void Start()
+    {
+        if(eventScriptableObject.electricity_restored == false)
+        {
+            lightsOffEmergency();
+        }
+        else
+        {
+            lightsOn();
+        }
+    }
 
     public void FlickerAndTurnOff()
     {
@@ -23,37 +36,45 @@ public class GlobalLight : MonoBehaviour
         yield return new WaitForSeconds(5f);
 
 
-        lightsOff();
+        lightsOffEmergency();
         yield return new WaitForSeconds(0.6f);
         lightsOn();
         yield return new WaitForSeconds(0.4f);
-        lightsOff();
+        lightsOffTotal();
         yield return new WaitForSeconds(0.5f);
-        lightsOff();
+        lightsOffTotal();
         yield return new WaitForSeconds(0.6f);
         lightsOn();
         yield return new WaitForSeconds(0.4f);
-        lightsOff();
+        lightsOffTotal();
         yield return new WaitForSeconds(0.7f);
         lightsOn();
 
         yield return new WaitForSeconds(UnityEngine.Random.Range(1f, 1.8f));
-        lightsOff();
+        lightsOffTotal();
         bathroomLight.GetComponent<BathroomLight>().StartFlicker();
         p_dialogues.GeneratoreDiRiserva();
+        eventScriptableObject.electricity_restored = false;
     }
 
-    private void lightsOn()
+    public void lightsOn()
     {
         gameObject.GetComponent<Light2D>().color = lightsOnColor;
         playerLight.SetActive(false);
         ambientLight.SetActive(false);
     }
 
-    private void lightsOff()
+    public void lightsOffEmergency()
     {
         gameObject.GetComponent<Light2D>().color = noLightColor;
         playerLight.SetActive(true);
         ambientLight.SetActive(true);
+    }
+
+    public void lightsOffTotal()
+    {
+        gameObject.GetComponent<Light2D>().color = noLightColor;
+        ambientLight.SetActive(false);
+        playerLight.SetActive(true);
     }
 }

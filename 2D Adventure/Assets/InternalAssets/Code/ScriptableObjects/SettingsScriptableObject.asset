@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa99e9bffdbc8744ebd6ded68973a6e7, type: 3}
-  m_Name: EventScriptableObject
+  m_Script: {fileID: 11500000, guid: 186d1e4ddd00cd14ba64c9fb7dcf485a, type: 3}
+  m_Name: SettingsScriptableObject
   m_EditorClassIdentifier: 
-  food_trigger: 0
+  language: Italiano
+  music_value: 1
+  sound_value: 1

@@ -16,6 +16,7 @@ public class PlayerManager : MonoBehaviour
 
 
     [SerializeField] private GameObject player;
+    [SerializeField] private SettingsScriptableObject settingsScriptableObject;
 
     [Header("Panels")]
     public GameObject pauseMenuPanel;
@@ -45,8 +46,12 @@ public class PlayerManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        musicSliderText.text = ((int)Mathf.Lerp(0, 100f, musicSlider.value)).ToString() + "%";
-        soundSliderText.text = ((int)Mathf.Lerp(0, 100f, soundSlider.value)).ToString() + "%";
+        musicSliderText.text = ((int)Mathf.Lerp(0, 100f, settingsScriptableObject.music_value)).ToString() + "%";
+        soundSliderText.text = ((int)Mathf.Lerp(0, 100f, settingsScriptableObject.sound_value)).ToString() + "%";
+        musicSlider.SetValueWithoutNotify(settingsScriptableObject.music_value);
+        soundSlider.SetValueWithoutNotify(settingsScriptableObject.sound_value);
+        myMixer.SetFloat("MusicVolume", Mathf.Log10(settingsScriptableObject.music_value) * 20);
+        myMixer.SetFloat("SoundVolume", Mathf.Log10(settingsScriptableObject.sound_value) * 20);
     }
 
 
@@ -93,13 +98,16 @@ public class PlayerManager : MonoBehaviour
     public void SetMusicVolume()
     {
         myMixer.SetFloat("MusicVolume", Mathf.Log10(musicSlider.value) * 20);
+        settingsScriptableObject.music_value = musicSlider.value;
         int valueToShow = (int)Mathf.Lerp(0, 100f, musicSlider.value);
         musicSliderText.text = valueToShow.ToString() + "%";
+
     }
 
     public void SetSoundVolume()
     {
         myMixer.SetFloat("SoundVolume", Mathf.Log10(soundSlider.value) * 20);
+        settingsScriptableObject.sound_value = soundSlider.value;
         int valueToShow = (int)Mathf.Lerp(0, 100f, soundSlider.value);
         soundSliderText.text = valueToShow.ToString() + "%";
     }

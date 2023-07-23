@@ -8,11 +8,9 @@ public class SceneTransition : MonoBehaviour
 {
     [SerializeField] private string sceneName;
     [SerializeField] private Vector2 moveToPosition;
-    [SerializeField] private EventScriptableObject eventScriptableObject;
     public GameObject fadeInPanel;
     public GameObject fadeOutPanel;
     public float fadeWait;
-    private bool food_trigger;
 
     private void Awake()
     {
@@ -35,7 +33,7 @@ public class SceneTransition : MonoBehaviour
     //}
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && eventScriptableObject.unlock_control)
+        if (other.CompareTag("Player"))
         {
             AudioManager.instance.Stop();
             AudioManager.instance.Play("DoorOpenSound");

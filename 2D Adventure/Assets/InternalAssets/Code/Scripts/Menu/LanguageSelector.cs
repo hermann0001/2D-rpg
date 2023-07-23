@@ -6,19 +6,23 @@ using UnityEngine;
 
 public class LanguageSelector : MonoBehaviour
 {
-    private String[] languages = { "English", "Italiano" };
-    public TextMeshProUGUI selectedLang;
+    [SerializeField] private String[] languages = { "English", "Italiano" };
+    [SerializeField] private TextMeshProUGUI selectedLang;
+    [SerializeField] private SettingsScriptableObject settingsScriptableObject;
+    
     private int index;
 
     private void Start()
     {
-        index = 0;
+        index = 1;
         selectedLang.text = languages[index];
+        settingsScriptableObject.language = languages[index];
     }
 
     public void SwitchLang()
     {
         index++;
-        selectedLang.text = languages[index % languages.Length]; 
+        selectedLang.text = languages[index % languages.Length];
+        settingsScriptableObject.language = languages[index % languages.Length];
     }
 }

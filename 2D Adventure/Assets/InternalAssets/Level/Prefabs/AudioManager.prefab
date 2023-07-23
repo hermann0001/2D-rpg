@@ -69,7 +69,7 @@ MonoBehaviour:
   - name: TypingSound
     clip: {fileID: 8300000, guid: 58a2159040b22e64aae9ad88b6e745a6, type: 3}
     mixer: {fileID: -5131197257157760752, guid: f34050b1348783d4380491ea7d81b87b, type: 2}
-    volume: 0.838
+    volume: 0.63
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -131,6 +131,20 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: CrunchingSound
     clip: {fileID: 8300000, guid: 889648fae4283844db2ed4799c2a56e6, type: 3}
+    mixer: {fileID: -5131197257157760752, guid: f34050b1348783d4380491ea7d81b87b, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GeneratorSound
+    clip: {fileID: 8300000, guid: f70ff28a96d23ec469a82a1f55bcc545, type: 3}
+    mixer: {fileID: -5131197257157760752, guid: f34050b1348783d4380491ea7d81b87b, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: DigitSound
+    clip: {fileID: 8300000, guid: 5858315b1affc2b4e9978f084bc8f5f6, type: 3}
     mixer: {fileID: -5131197257157760752, guid: f34050b1348783d4380491ea7d81b87b, type: 2}
     volume: 1
     pitch: 1

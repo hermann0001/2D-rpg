@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3708985, g: 0.3783704, b: 0.35722548, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -206,7 +206,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &51995752
 MonoBehaviour:
@@ -3093,7 +3093,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1579906940
 GameObject:
@@ -3657,7 +3657,7 @@ RectTransform:
   - {fileID: 510354506}
   - {fileID: 302548818}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3717,7 +3717,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7bacb832dd7e9247a624ef5f9558f38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  languages:
+  - English
+  - Italiano
   selectedLang: {fileID: 1320761712}
+  settingsScriptableObject: {fileID: 11400000, guid: 0df73a7cf213267448c8f1bda16b6fab, type: 2}
 --- !u!114 &1764699279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4175,7 +4179,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2085182851
 MonoBehaviour:
@@ -4242,6 +4246,7 @@ MonoBehaviour:
   musicSliderText: {fileID: 194288955}
   soundSliderText: {fileID: 323378054}
   optionsPanel: {fileID: 302548817}
+  settingsScriptableObject: {fileID: 11400000, guid: 0df73a7cf213267448c8f1bda16b6fab, type: 2}
 --- !u!4 &2117284727
 Transform:
   m_ObjectHideFlags: 0
@@ -4255,5 +4260,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
