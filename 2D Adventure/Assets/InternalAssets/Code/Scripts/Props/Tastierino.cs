@@ -8,6 +8,7 @@ public class Tastierino : MonoBehaviour, IInteractable
     [SerializeField] private GameObject controlRoomTrigger;
     [SerializeField] private GlobalLight globalLight;
 
+
     private void Start()
     {
         if (eventScriptableObject.food_trigger == false)
@@ -28,7 +29,6 @@ public class Tastierino : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        Debug.Log("Interacted!");
         StartCoroutine(IEUnlockControl());
     }
     
@@ -46,7 +46,5 @@ public class Tastierino : MonoBehaviour, IInteractable
         eventScriptableObject.electricity_restored = true;
         controlRoomTrigger.SetActive(true);
         globalLight.lightsOffEmergency();
-        yield return new WaitForSeconds(1.3f);
-        AudioManager.instance.Play("GlassBreakSound");
     }
 }

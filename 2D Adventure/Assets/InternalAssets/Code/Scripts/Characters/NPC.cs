@@ -16,7 +16,7 @@ public class NPC : MonoBehaviour, IInteractable
 
     [Header("Sound")]
     [SerializeField]
-    private AudioClip sound;
+    private string sound;
 
     [Header("Image")]
     [SerializeField]

@@ -14,7 +14,7 @@ public class DialogueSystem : MonoBehaviour
 
     [SerializeField] private Text textHolder;                              //textHolder is the text box where main text will be shown; textName is the text box where the name of who is talking will be shown
     [SerializeField] private List<string> dialogueLines = new List<string>();        //this is the text that will be written in the textHolder
-    [SerializeField] private AudioClip sound;                                        //a sound for each character displayed
+    [SerializeField] private string sound;                                        //a sound for each character displayed
     [SerializeField] private float delay;                                            //delay between each charater displayed
     [SerializeField] private Image imageHolder;                                      //an holder for the npc image 
 
@@ -40,12 +40,10 @@ public class DialogueSystem : MonoBehaviour
     }
 
     //overload dialogue with npc
-    public void addNewDialogue(string[] lines, Sprite characterSprite, Color textColor, Font textFont, AudioClip sound)
+    public void addNewDialogue(string[] lines, Sprite characterSprite, Color textColor, Font textFont, string sound)
     {
         index = 0;
 
-
-        //this.npcName = name
         imageHolder.sprite = characterSprite;
         imageHolder.preserveAspect = true;
         dialoguePanel.transform.Find("NpcImage").gameObject.SetActive(true);
@@ -95,7 +93,7 @@ public class DialogueSystem : MonoBehaviour
         {
             textHolder.text += c;
             if (sound != null)
-                AudioManager.instance.Play("TypingSound");
+                AudioManager.instance.Play(sound);
             yield return new WaitForSeconds(delay);
         }
     }

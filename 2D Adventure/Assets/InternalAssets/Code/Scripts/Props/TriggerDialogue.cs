@@ -8,7 +8,6 @@ public class TriggerDialogue : MonoBehaviour
     [SerializeField] string tagFilter;
     [SerializeField] UnityEvent onTriggerEnter;
     [SerializeField] UnityEvent onTriggerExit;
-    [SerializeField] EventScriptableObject eventScriptableObject;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

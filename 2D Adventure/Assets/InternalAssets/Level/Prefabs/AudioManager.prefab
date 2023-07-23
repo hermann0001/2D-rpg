@@ -157,3 +157,17 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: WetcherMusic
+    clip: {fileID: 8300000, guid: e6684cf84f5c8ac4fa9a271a834bdf24, type: 3}
+    mixer: {fileID: -757197304646187179, guid: f34050b1348783d4380491ea7d81b87b, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: WetcherTypeSound
+    clip: {fileID: 8300000, guid: 2aeacefc9bf5a254188e9b290572d0a9, type: 3}
+    mixer: {fileID: -5131197257157760752, guid: f34050b1348783d4380491ea7d81b87b, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

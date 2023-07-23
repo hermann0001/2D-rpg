@@ -281,8 +281,8 @@ MonoBehaviour:
   dialogueSpriteIcon: {fileID: 21300000, guid: 4c5c64629d1b05d4ca524a9633de9338, type: 3}
   dialogueFont: {fileID: 12800000, guid: 881019752ec49df44bc0fedd3658a60a, type: 3}
   dialogueTextColor: {r: 1, g: 1, b: 1, a: 1}
-  typingSound: {fileID: 8300000, guid: 58a2159040b22e64aae9ad88b6e745a6, type: 3}
-  eventScriptableObject: {fileID: 0}
+  typingSound: TypingSound
+  eventScriptableObject: {fileID: 11400000, guid: 1cbb77a16e6676d4886753477b4e727e, type: 2}
 --- !u!1 &4639852792550840994
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,7 +332,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.776
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.4
+  m_Intensity: 0.3
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000

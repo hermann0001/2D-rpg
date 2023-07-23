@@ -4828,7 +4828,7 @@ MonoBehaviour:
   - English
   - Italiano
   selectedLang: {fileID: 4237156155990414286}
-  settingsScriptableObject: {fileID: 0}
+  settingsScriptableObject: {fileID: 11400000, guid: 0df73a7cf213267448c8f1bda16b6fab, type: 2}
 --- !u!1 &4237156157337454055
 GameObject:
   m_ObjectHideFlags: 0

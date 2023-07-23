@@ -10,6 +10,7 @@ public class EventScriptableObject : ScriptableObject
     [SerializeField] public bool electricity_restored;
     [SerializeField] public bool talked_to_pc;
     [SerializeField] public bool first_scary_audio_played;
+    [SerializeField] public bool talked_to_wetcher;
 
     private void Awake()
     {
@@ -18,6 +19,7 @@ public class EventScriptableObject : ScriptableObject
         electricity_restored = true;
         talked_to_pc = false;
         first_scary_audio_played = false;
+        talked_to_wetcher = false;
     }
 
     public void eat()

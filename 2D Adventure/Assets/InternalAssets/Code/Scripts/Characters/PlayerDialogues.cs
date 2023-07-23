@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +12,7 @@ public class PlayerDialogues : MonoBehaviour, IInteractable
     [SerializeField] private Sprite dialogueSpriteIcon;
     [SerializeField] private Font dialogueFont;
     [SerializeField] private Color dialogueTextColor;
-    [SerializeField] private AudioClip typingSound;
+    [SerializeField] private string typingSound;
     [SerializeField] private EventScriptableObject eventScriptableObject;
 
     private void Awake()
@@ -119,6 +120,15 @@ public class PlayerDialogues : MonoBehaviour, IInteractable
         if (!is_talking)
         {
             string[] lines = { "È la terza volta in questo mese", "dovrebbero rivedere il sistema di alimentazione...", "Ricordo un generatore di riserva nei paraggi." };
+            DialogueSystem.Instance.addNewDialogue(lines, dialogueSpriteIcon, dialogueTextColor, dialogueFont, typingSound);
+        }
+    }
+
+    public void ControllaBagno()
+    {
+        if (!is_talking)
+        {
+            string[] lines = { "Quel rumore sembrava provenire dal bagno..." };
             DialogueSystem.Instance.addNewDialogue(lines, dialogueSpriteIcon, dialogueTextColor, dialogueFont, typingSound);
         }
     }

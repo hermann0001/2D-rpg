@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class LanguageSelector : MonoBehaviour
 {
-    [SerializeField] private String[] languages = { "English", "Italiano" };
+    [SerializeField] private string[] languages = { "English", "Italiano" };
     [SerializeField] private TextMeshProUGUI selectedLang;
     [SerializeField] private SettingsScriptableObject settingsScriptableObject;
     

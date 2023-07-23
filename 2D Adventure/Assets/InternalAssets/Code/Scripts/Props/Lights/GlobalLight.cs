@@ -39,7 +39,6 @@ public class GlobalLight : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
 
-
         lightsOffTotal();
         yield return new WaitForSeconds(0.6f);
         lightsOn();
@@ -73,7 +72,7 @@ public class GlobalLight : MonoBehaviour
         gameObject.GetComponent<Light2D>().color = noLightColor;
         playerLight.SetActive(true);
         ambientLight.SetActive(true);
-        if (bathroomLight != null) bathroomLight.GetComponent<BathroomLight>().StartFlicker();
+        if(bathroomLight != null) StartCoroutine(IEbathroomFlicker());
     }
 
     public void lightsOffTotal()
@@ -81,5 +80,16 @@ public class GlobalLight : MonoBehaviour
         gameObject.GetComponent<Light2D>().color = noLightColor;
         ambientLight.SetActive(false);
         playerLight.SetActive(true);
+    }
+
+    public IEnumerator IEbathroomFlicker()
+    {
+        while (true)
+        {
+            bathroomLight.SetActive(false);
+            yield return new WaitForSeconds(1f);
+            bathroomLight.SetActive(true);
+            yield return new WaitForSeconds(1f);
+        }
     }
 }

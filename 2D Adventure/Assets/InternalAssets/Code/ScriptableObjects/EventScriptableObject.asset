@@ -15,5 +15,6 @@ MonoBehaviour:
   unlock_control: 0
   food_trigger: 0
   electricity_restored: 1
-  talked_to_pc: 1
-  first_scary_audio_played: 0
+  talked_to_pc: 0
+  first_scary_audio_played: 1
+  talked_to_wetcher: 0
