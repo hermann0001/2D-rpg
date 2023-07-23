@@ -16,6 +16,9 @@ public class Tastierino : MonoBehaviour, IInteractable
             eventScriptableObject.electricity_restored = true;
         }
 
+        if (eventScriptableObject.unlock_control == true)
+            controlRoomTrigger.SetActive(true);
+
     }
 
     public bool CanInteract()
@@ -43,5 +46,7 @@ public class Tastierino : MonoBehaviour, IInteractable
         eventScriptableObject.electricity_restored = true;
         controlRoomTrigger.SetActive(true);
         globalLight.lightsOffEmergency();
+        yield return new WaitForSeconds(1.3f);
+        AudioManager.instance.Play("GlassBreakSound");
     }
 }

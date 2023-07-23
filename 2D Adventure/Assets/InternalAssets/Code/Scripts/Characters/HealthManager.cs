@@ -33,11 +33,4 @@ public class HealthManager : MonoBehaviour
         if (currentHealth < 3 && currentHealth > 0)
             currentHealth++;
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-            Gain1Hp();
-    }
-
 }

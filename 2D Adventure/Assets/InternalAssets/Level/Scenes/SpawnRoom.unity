@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 181121584}
   - component: {fileID: 181121583}
+  - component: {fileID: 181121585}
   m_Layer: 0
   m_Name: Global Light
   m_TagString: Untagged
@@ -234,6 +235,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &181121585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181121582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c39dd9f0f718da4daa2df5d7c60b0d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLight: {fileID: 237340223}
+  bathroomLight: {fileID: 0}
+  ambientLight: {fileID: 1607664137}
+  noLightColor: {r: 0.043137256, g: 0.07058824, b: 0.1254902, a: 0}
+  lightsOnColor: {r: 0.5411765, g: 0.6509804, b: 0.8392157, a: 0}
+  p_dialogues: {fileID: 237340222}
+  eventScriptableObject: {fileID: 11400000, guid: 1cbb77a16e6676d4886753477b4e727e, type: 2}
 --- !u!1001 &237340220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -241,6 +261,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 355099610771252859, guid: afc774c9d4aed6440a18fcf6dfcf40c2, type: 3}
+      propertyPath: eventScriptableObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 1cbb77a16e6676d4886753477b4e727e, type: 2}
     - target: {fileID: 2534652226031163294, guid: afc774c9d4aed6440a18fcf6dfcf40c2, type: 3}
       propertyPath: m_Name
       value: Player
@@ -294,6 +318,22 @@ PrefabInstance:
 --- !u!1 &237340221 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2534652226031163294, guid: afc774c9d4aed6440a18fcf6dfcf40c2, type: 3}
+  m_PrefabInstance: {fileID: 237340220}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &237340222 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 355099610771252859, guid: afc774c9d4aed6440a18fcf6dfcf40c2, type: 3}
+  m_PrefabInstance: {fileID: 237340220}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237340221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbdb9eb3e3847494ca705ede08c3c186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &237340223 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4639852792550840994, guid: afc774c9d4aed6440a18fcf6dfcf40c2, type: 3}
   m_PrefabInstance: {fileID: 237340220}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &268403289
@@ -442,10 +482,133 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-  - Ciao sono un pc
+  - "Ciao Anastasia, ti trovi qui perch\xE9 sembra che l'intero equipaggio sia sparito
+    nel nulla"
+  - "ma c'\xE8 ancora speranza: potrebbero esserci dei superstiti."
+  - "Sappi che non sar\xE0 un'impresa facile."
+  - "La stazione \xE8 stata abbandonata da tempo, e ci sono molte incognite su ci\xF2
+    che potresti"
+  - trovare all'interno.
+  - 'Dovrai affrontare sfide e enigmi, quindi ti consiglio di essere preparata mentalmente '
+  - e di fare affidamento sulla tua astuzia e sul tuo ingegno.
+  - 'Buona fortuna, e che la tua esperienza e dedizione portino luce '
+  - nei misteri della Centaurus-9,
+  - ricorda che le tue decisioni potrebbero avere conseguenze significative.
   dialogueColor: {r: 1, g: 1, b: 1, a: 1}
   dialogueFont: {fileID: 12800000, guid: 87b40be68dab14e42bf6fe5ea6608794, type: 3}
   screenLight: {fileID: 650947470}
+  playerDialogues: {fileID: 237340222}
+--- !u!1 &425117415
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 425117416}
+  - component: {fileID: 425117417}
+  m_Layer: 0
+  m_Name: SpotLight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &425117416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425117415}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.421, y: -0.28, z: -0.5197542}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1607664138}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &425117417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425117415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.647
+  m_Color: {r: 0.7028302, g: 0.7633168, b: 1, a: 1}
+  m_Intensity: 0.7
+  m_LightVolumeIntensity: 1
+  m_LightVolumeIntensityEnabled: 0
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensity: 0.75
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_Vertices:
+  - position: {x: 0.9985302, y: 0.9985302, z: 0}
+    color: {r: 0.70710677, g: 0.70710677, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  - position: {x: 0.9985302, y: 0.9985302, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0, y: 0}
+  - position: {x: -0.9985302, y: 0.9985302, z: 0}
+    color: {r: -0.70710677, g: 0.70710677, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  - position: {x: -0.9985302, y: 0.9985302, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0, y: 0}
+  - position: {x: -0.99853003, y: -0.9985304, z: 0}
+    color: {r: -0.70710665, g: -0.7071069, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  - position: {x: -0.99853003, y: -0.9985304, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0, y: 0}
+  - position: {x: 0.99853003, y: -0.9985304, z: 0}
+    color: {r: 0.70710665, g: -0.7071069, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  - position: {x: 0.99853003, y: -0.9985304, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0, y: 0}
+  - position: {x: 0, y: 0, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0, y: 0}
+  m_Triangles: 030001000800020000000100030002000100050003000800040002000300050004000300070005000800060004000500070006000500010007000800000006000700010000000700
+  m_LocalBounds:
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 2
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1001 &465318086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1039,6 +1202,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1607664137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1607664138}
+  m_Layer: 0
+  m_Name: AmbientLight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1607664138
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607664137}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.3307555, y: -1.2009457, z: 0.5197542}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 425117416}
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1633588340 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8760177835672260192, guid: 152d437a58e53cf4cb4fd3def01dbeec, type: 3}

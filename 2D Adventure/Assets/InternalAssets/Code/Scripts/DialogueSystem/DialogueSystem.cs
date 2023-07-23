@@ -12,7 +12,7 @@ public class DialogueSystem : MonoBehaviour
     public GameObject dialoguePanel;                                                //the entire panel
     public Button skipButton;                                                       //an invisible button to skip
 
-    [SerializeField] private Text textHolder, textName;                              //textHolder is the text box where main text will be shown; textName is the text box where the name of who is talking will be shown
+    [SerializeField] private Text textHolder;                              //textHolder is the text box where main text will be shown; textName is the text box where the name of who is talking will be shown
     [SerializeField] private List<string> dialogueLines = new List<string>();        //this is the text that will be written in the textHolder
     [SerializeField] private AudioClip sound;                                        //a sound for each character displayed
     [SerializeField] private float delay;                                            //delay between each charater displayed
@@ -48,6 +48,7 @@ public class DialogueSystem : MonoBehaviour
         //this.npcName = name
         imageHolder.sprite = characterSprite;
         imageHolder.preserveAspect = true;
+        dialoguePanel.transform.Find("NpcImage").gameObject.SetActive(true);
 
         textHolder.color = textColor;
         textHolder.font = textFont;

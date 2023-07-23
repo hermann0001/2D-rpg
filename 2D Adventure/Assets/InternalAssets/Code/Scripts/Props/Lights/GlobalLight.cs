@@ -16,13 +16,17 @@ public class GlobalLight : MonoBehaviour
 
     private void Start()
     {
-        if(eventScriptableObject.electricity_restored == false)
-        {
-            lightsOffEmergency();
-        }
-        else
+        if(eventScriptableObject.electricity_restored == true && eventScriptableObject.food_trigger == false)
         {
             lightsOn();
+        }
+        else if(eventScriptableObject.electricity_restored == false && eventScriptableObject.food_trigger == true)
+        {
+            lightsOffTotal();
+        }
+        else if(eventScriptableObject == true && eventScriptableObject.food_trigger == true)
+        {
+            lightsOffEmergency();
         }
     }
 
@@ -36,7 +40,7 @@ public class GlobalLight : MonoBehaviour
         yield return new WaitForSeconds(5f);
 
 
-        lightsOffEmergency();
+        lightsOffTotal();
         yield return new WaitForSeconds(0.6f);
         lightsOn();
         yield return new WaitForSeconds(0.4f);
@@ -52,7 +56,7 @@ public class GlobalLight : MonoBehaviour
 
         yield return new WaitForSeconds(UnityEngine.Random.Range(1f, 1.8f));
         lightsOffTotal();
-        bathroomLight.GetComponent<BathroomLight>().StartFlicker();
+        yield return new WaitForSeconds(2f);
         p_dialogues.GeneratoreDiRiserva();
         eventScriptableObject.electricity_restored = false;
     }
@@ -69,6 +73,7 @@ public class GlobalLight : MonoBehaviour
         gameObject.GetComponent<Light2D>().color = noLightColor;
         playerLight.SetActive(true);
         ambientLight.SetActive(true);
+        if (bathroomLight != null) bathroomLight.GetComponent<BathroomLight>().StartFlicker();
     }
 
     public void lightsOffTotal()

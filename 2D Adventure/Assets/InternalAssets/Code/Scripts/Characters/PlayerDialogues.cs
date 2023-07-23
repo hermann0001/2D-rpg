@@ -12,23 +12,25 @@ public class PlayerDialogues : MonoBehaviour, IInteractable
     [SerializeField] private Font dialogueFont;
     [SerializeField] private Color dialogueTextColor;
     [SerializeField] private AudioClip typingSound;
+    [SerializeField] private EventScriptableObject eventScriptableObject;
 
     private void Awake()
     {
-        if(!PlayerManager.first_spawnroom_dialogue_shown && SceneManager.GetActiveScene().name.Equals("SpawnRoom"))
+        if(eventScriptableObject.talked_to_pc == false && SceneManager.GetActiveScene().name.Equals("SpawnRoom"))
             CreaExitBlock();
     }
 
-
-    // Update is called once per frame
-    void Update()
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().name.Equals("SpawnRoom"))
+        {
+            StartCoroutine(CreateFirstDialogue());
+            eventScriptableObject.talked_to_pc = true;
+        }
+    }
+    private void Update()
     {
         is_talking = DialogueSystem.Instance.isPanelActive();
-        if (!PlayerManager.first_spawnroom_dialogue_shown && SceneManager.GetActiveScene().name.Equals("SpawnRoom"))
-        {
-            PlayerManager.first_spawnroom_dialogue_shown = true;
-            StartCoroutine(CreateFirstDialogue());
-        }
     }
 
     public IEnumerator CreateFirstDialogue()
@@ -74,6 +76,14 @@ public class PlayerDialogues : MonoBehaviour, IInteractable
         boxCollider2D.edgeRadius = 0.025f;
     }
 
+    public void PensieroRispostaAlMessaggioPC()
+    {
+        if (!is_talking)
+        {
+            string[] lines = { "Chissà cosa sarà successo a tutti quanti..." };
+            DialogueSystem.Instance.addNewDialogue(lines, dialogueSpriteIcon, dialogueTextColor, dialogueFont, typingSound);
+        }
+    }
     public void CreaPrimoDialogoDormitorio()
     {
         if (!PlayerManager.first_dorm_dialogue_shown)
@@ -101,13 +111,14 @@ public class PlayerDialogues : MonoBehaviour, IInteractable
         {
             string[] lines = { "Sono io, Anastasia." };
             DialogueSystem.Instance.addNewDialogue(lines, dialogueSpriteIcon, dialogueTextColor, dialogueFont, typingSound);
+            AudioManager.instance.Play("HandWashingSound");
         }
     }
     public void GeneratoreDiRiserva()
     {
         if (!is_talking)
         {
-            string[] lines = { "È la terza volta in questo mese", "dovrebbero rivedere il sistema di alimentazione...", "ricordo un generatore di riserva nei paraggi." };
+            string[] lines = { "È la terza volta in questo mese", "dovrebbero rivedere il sistema di alimentazione...", "Ricordo un generatore di riserva nei paraggi." };
             DialogueSystem.Instance.addNewDialogue(lines, dialogueSpriteIcon, dialogueTextColor, dialogueFont, typingSound);
         }
     }

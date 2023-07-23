@@ -10,7 +10,6 @@ using UnityEngine.UI;
 public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager Instance;
-    public static bool first_spawnroom_dialogue_shown = false;
     public static bool first_dorm_dialogue_shown = false;
     public static bool bathroom_visited = false;
 

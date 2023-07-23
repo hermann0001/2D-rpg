@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unlock_control: 0
   food_trigger: 0
-  electricity_restored: 0
+  electricity_restored: 1
+  talked_to_pc: 1
+  first_scary_audio_played: 0
