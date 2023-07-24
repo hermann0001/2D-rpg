@@ -72,7 +72,7 @@ public class PlayFabControls : MonoBehaviour
         Debug.Log(result.ToString());
         errorSignUp.text = "";
         errorLogIn.text = "";
-        StartGame();
+        SwitchToLogInTab();
     }
 
     public void RegisterError(PlayFabError error)
