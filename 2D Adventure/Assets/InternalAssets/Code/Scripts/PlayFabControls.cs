@@ -112,7 +112,7 @@ public class PlayFabControls : MonoBehaviour
 
     private IEnumerator ShowErrorAndHide(PlayFabError error)
     {
-        float duration = 3f;
+        float duration = 1f;
 
 
 
@@ -131,12 +131,6 @@ public class PlayFabControls : MonoBehaviour
     }
 
     void StartGame()
-    {
-        startPanel.SetActive(false);
-        HUD.SetActive(true);
-    }
-
-    public void StartScene()
     {
         SceneManager.LoadScene("Menu");
     }

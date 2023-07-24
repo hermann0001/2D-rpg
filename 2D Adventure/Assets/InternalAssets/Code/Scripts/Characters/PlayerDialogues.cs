@@ -132,4 +132,22 @@ public class PlayerDialogues : MonoBehaviour, IInteractable
             DialogueSystem.Instance.addNewDialogue(lines, dialogueSpriteIcon, dialogueTextColor, dialogueFont, typingSound);
         }
     }
+
+    public void PensieroDopoWetcherBagno()
+    {
+        if (!is_talking)
+        {
+            string[] lines = { "Cos'era quel mostro?", "Cosa stava cercando di dirmi", "Cosa voleva da me?", ".  .  ." };
+            DialogueSystem.Instance.addNewDialogue(lines, dialogueSpriteIcon, dialogueTextColor, dialogueFont, typingSound);
+        }
+    }
+
+    public void PortaBloccata()
+    {
+        if (!is_talking)
+        {
+            string[] lines = { "È bloccata..." };
+            DialogueSystem.Instance.addNewDialogue(lines, dialogueSpriteIcon, dialogueTextColor, dialogueFont, typingSound);
+        }
+    }
 }
